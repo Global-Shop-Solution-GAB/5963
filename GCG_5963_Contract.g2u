@@ -1,0 +1,2609 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.frmContract..Create(BaseForm)
+Gui.frmContract..Caption("Contract")
+Gui.frmContract..Size(1120,685)
+Gui.frmContract..MinX(0)
+Gui.frmContract..MinY(0)
+Gui.frmContract..Position(0,0)
+Gui.frmContract..AlwaysOnTop(False)
+Gui.frmContract..FontName("Tahoma")
+Gui.frmContract..FontSize(8.25)
+Gui.frmContract..ControlBox(True)
+Gui.frmContract..MaxButton(False)
+Gui.frmContract..MinButton(False)
+Gui.frmContract..MousePointer(0)
+Gui.frmContract..Moveable(True)
+Gui.frmContract..Sizeable(False)
+Gui.frmContract..ShowInTaskBar(True)
+Gui.frmContract..TitleBar(True)
+Gui.frmContract..Event(UnLoad,frmContract_UnLoad)
+Gui.frmContract.lbl1.Create(Label,"Order#",True,42,16,0,12,13,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl1.BorderStyle(0)
+Gui.frmContract.lbl2.Create(Label,"O/R Contract",True,74,16,0,142,13,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl2.BorderStyle(0)
+Gui.frmContract.lbl3.Create(Label,"Type",True,28,16,0,252,13,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl3.BorderStyle(0)
+Gui.frmContract.lbl4.Create(Label,"Foreign/Domestic",True,100,16,0,301,13,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl4.BorderStyle(0)
+Gui.frmContract.lblREV.Create(Label,"Revision Notes",False,83,16,0,503,13,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lblREV.BorderStyle(0)
+Gui.frmContract.txtOrdno.Create(TextBox,"",True,120,22,0,11,33,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtOrdno.Locked(True)
+Gui.frmContract.txtOrdno.TabStop(True)
+Gui.frmContract.txtOrdno.TabIndex(1)
+Gui.frmContract.txtContractO.Create(TextBox,"",True,100,22,0,142,33,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtContractO.Locked(True)
+Gui.frmContract.txtContractO.TabStop(True)
+Gui.frmContract.txtContractO.TabIndex(2)
+Gui.frmContract.txtRevision.Create(TextBox,"",False,395,22,0,503,33,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtRevision.TabStop(True)
+Gui.frmContract.txtRevision.TabIndex(7)
+Gui.frmContract.ddlType.Create(DropDownList)
+Gui.frmContract.ddlType.Enabled(True)
+Gui.frmContract.ddlType.Visible(True)
+Gui.frmContract.ddlType.Zorder(0)
+Gui.frmContract.ddlType.Size(40,22)
+Gui.frmContract.ddlType.Position(251,33)
+Gui.frmContract.ddlType.FontName("Tahoma")
+Gui.frmContract.ddlType.FontSize(7.8)
+Gui.frmContract.ddlType.Event(Change,ddlType_Change)
+Gui.frmContract.ddlType.TabStop(True)
+Gui.frmContract.ddlType.TabIndex(3)
+Gui.frmContract.ddlFD.Create(DropDownList)
+Gui.frmContract.ddlFD.Enabled(True)
+Gui.frmContract.ddlFD.Visible(True)
+Gui.frmContract.ddlFD.Zorder(0)
+Gui.frmContract.ddlFD.Size(87,22)
+Gui.frmContract.ddlFD.Position(300,33)
+Gui.frmContract.ddlFD.FontName("Tahoma")
+Gui.frmContract.ddlFD.FontSize(7.8)
+Gui.frmContract.ddlFD.Event(Change,ddlFD_Change)
+Gui.frmContract.ddlFD.TabStop(True)
+Gui.frmContract.ddlFD.TabIndex(4)
+Gui.frmContract.cmdRevHist.Create(Button)
+Gui.frmContract.cmdRevHist.Enabled(True)
+Gui.frmContract.cmdRevHist.Visible(False)
+Gui.frmContract.cmdRevHist.Zorder(0)
+Gui.frmContract.cmdRevHist.Size(107,25)
+Gui.frmContract.cmdRevHist.Position(791,3)
+Gui.frmContract.cmdRevHist.Caption("Revision History")
+Gui.frmContract.cmdRevHist.FontName("Tahoma")
+Gui.frmContract.cmdRevHist.FontSize(7.8)
+Gui.frmContract.cmdRevHist.Event(Click,cmdRevHist_Click)
+Gui.frmContract.lbldealername.Create(Label,"Dealer Name",True,74,16,0,12,69,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbldealername.BorderStyle(0)
+Gui.frmContract.lblDealercontract.Create(Label,"Dealer Contract",True,70,12,0,304,69,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lblDealercontract.BorderStyle(0)
+Gui.frmContract.lbllocation.Create(Label,"Location",True,47,16,0,503,69,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbllocation.BorderStyle(0)
+Gui.frmContract.lbldealerSO.Create(Label,"Dealer Order#",True,83,16,0,758,69,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbldealerSO.BorderStyle(0)
+Gui.frmContract.txtdealer.Create(TextBox,"",True,275,22,0,11,88,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtdealer.Locked(True)
+Gui.frmContract.txtdealer.Event(Change,txtdealer_Change)
+Gui.frmContract.txtdealer.TabStop(True)
+Gui.frmContract.txtdealer.TabIndex(8)
+Gui.frmContract.txtContractD.Create(TextBox,"",True,87,22,0,300,88,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtContractD.Locked(True)
+Gui.frmContract.txtContractD.TabStop(True)
+Gui.frmContract.txtContractD.TabIndex(9)
+Gui.frmContract.txtloc.Create(TextBox,"",True,117,22,0,503,88,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtloc.Event(Change,txtloc_Change)
+Gui.frmContract.txtloc.MaxLength(10)
+Gui.frmContract.txtloc.TabStop(True)
+Gui.frmContract.txtloc.TabIndex(11)
+Gui.frmContract.txtdealerSO.Create(TextBox,"",True,102,22,0,758,88,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtdealerSO.Locked(True)
+Gui.frmContract.txtdealerSO.Event(Change,txtdealerSO_Change)
+Gui.frmContract.txtdealerSO.TabStop(True)
+Gui.frmContract.txtdealerSO.TabIndex(13)
+Gui.frmContract.txtCustomer.Create(TextBox,"",True,275,22,0,11,138,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtCustomer.Locked(True)
+Gui.frmContract.txtCustomer.Event(Change,txtCustomer_Change)
+Gui.frmContract.txtCustomer.TabStop(True)
+Gui.frmContract.txtCustomer.TabIndex(15)
+Gui.frmContract.txtRanch.Create(TextBox,"",True,188,22,0,300,138,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtRanch.Event(Change,txtRanch_Change)
+Gui.frmContract.txtRanch.MaxLength(30)
+Gui.frmContract.txtRanch.TabStop(True)
+Gui.frmContract.txtRanch.TabIndex(16)
+Gui.frmContract.lbl11.Create(Label,"Organization/customer",True,130,16,0,12,118,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl11.BorderStyle(0)
+Gui.frmContract.lbl12.Create(Label,"Ranch/Orchard",True,86,16,0,304,118,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl12.BorderStyle(0)
+Gui.frmContract.lbl13.Create(Label,"Lname",True,38,16,0,503,121,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl13.BorderStyle(0)
+Gui.frmContract.lbl14.Create(Label,"Fname",True,39,16,0,632,121,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl14.BorderStyle(0)
+Gui.frmContract.lbl15.Create(Label,"Signator",True,48,16,0,758,121,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl15.BorderStyle(0)
+Gui.frmContract.txtLname.Create(TextBox,"",True,117,22,0,503,139,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtLname.Event(Change,txtLname_Change)
+Gui.frmContract.txtLname.MaxLength(20)
+Gui.frmContract.txtLname.TabStop(True)
+Gui.frmContract.txtLname.TabIndex(17)
+Gui.frmContract.txtfname.Create(TextBox,"",True,117,22,0,631,139,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtfname.Event(Change,txtfname_Change)
+Gui.frmContract.txtfname.MaxLength(20)
+Gui.frmContract.txtfname.TabStop(True)
+Gui.frmContract.txtfname.TabIndex(18)
+Gui.frmContract.txtsignator.Create(TextBox,"",True,137,22,0,759,139,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtsignator.Event(Change,txtsignator_Change)
+Gui.frmContract.txtsignator.MaxLength(20)
+Gui.frmContract.txtsignator.TabStop(True)
+Gui.frmContract.txtsignator.TabIndex(19)
+Gui.frmContract.txtAdd1.Create(TextBox,"",True,275,22,0,11,211,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtAdd1.Locked(True)
+Gui.frmContract.txtAdd1.Event(Change,txtAdd1_Change)
+Gui.frmContract.txtAdd1.TabStop(True)
+Gui.frmContract.txtAdd1.TabIndex(20)
+Gui.frmContract.txtCity.Create(TextBox,"",True,87,22,0,300,211,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtCity.Locked(True)
+Gui.frmContract.txtCity.Event(Change,txtCity_Change)
+Gui.frmContract.txtCity.TabStop(True)
+Gui.frmContract.txtCity.TabIndex(21)
+Gui.frmContract.txtState.Create(TextBox,"",True,82,22,0,404,211,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtState.Locked(True)
+Gui.frmContract.txtState.Event(Change,txtState_Change)
+Gui.frmContract.txtState.TabStop(True)
+Gui.frmContract.txtState.TabIndex(22)
+Gui.frmContract.txtzip.Create(TextBox,"",True,117,22,0,503,211,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtzip.Locked(True)
+Gui.frmContract.txtzip.Event(Change,txtzip_Change)
+Gui.frmContract.txtzip.TabStop(True)
+Gui.frmContract.txtzip.TabIndex(23)
+Gui.frmContract.txtcounty.Create(TextBox,"",True,117,22,0,631,211,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtcounty.Event(Change,txtcounty_Change)
+Gui.frmContract.txtcounty.TabStop(True)
+Gui.frmContract.txtcounty.TabIndex(24)
+Gui.frmContract.txtTel.Create(TextBox,"",True,142,22,0,758,211,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtTel.Locked(True)
+Gui.frmContract.txtTel.Event(Change,txtTel_Change)
+Gui.frmContract.txtTel.TabStop(True)
+Gui.frmContract.txtTel.TabIndex(25)
+Gui.frmContract.lbl16.Create(Label,"Address",True,46,16,0,17,193,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl16.BorderStyle(0)
+Gui.frmContract.lblCity.Create(Label,"City",True,18,12,0,304,193,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lblCity.BorderStyle(0)
+Gui.frmContract.lblState.Create(Label,"State",True,22,12,0,410,193,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lblState.BorderStyle(0)
+Gui.frmContract.lblZip.Create(Label,"Zipcode",True,36,12,0,503,193,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lblZip.BorderStyle(0)
+Gui.frmContract.lblCountry.Create(Label,"County",True,34,12,0,628,193,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lblCountry.BorderStyle(0)
+Gui.frmContract.lbl21.Create(Label,"Telephone",True,60,16,0,760,193,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl21.BorderStyle(0)
+Gui.frmContract.GsGridContract.Create(GsGridControl)
+Gui.frmContract.GsGridContract.Enabled(True)
+Gui.frmContract.GsGridContract.Visible(True)
+Gui.frmContract.GsGridContract.Zorder(0)
+Gui.frmContract.GsGridContract.Size(731,167)
+Gui.frmContract.GsGridContract.Position(16,249)
+Gui.frmContract.lbl23.Create(Label,"Financial Institution",True,110,16,0,794,248,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl23.BorderStyle(0)
+Gui.frmContract.lbl24.Create(Label,"Comments",True,61,16,0,758,299,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl24.BorderStyle(0)
+Gui.frmContract.lbl25.Create(Label,"Payment Type",True,81,16,0,824,280,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl25.BorderStyle(0)
+Gui.frmContract.txtmultcomments.Create(TextboxM)
+Gui.frmContract.txtmultcomments.Enabled(True)
+Gui.frmContract.txtmultcomments.Visible(True)
+Gui.frmContract.txtmultcomments.Zorder(0)
+Gui.frmContract.txtmultcomments.Size(344,97)
+Gui.frmContract.txtmultcomments.Position(759,319)
+Gui.frmContract.txtmultcomments.FontName("Tahoma")
+Gui.frmContract.txtmultcomments.FontSize(7.8)
+Gui.frmContract.txtmultcomments.MaxLength(200)
+Gui.frmContract.txtmultcomments.Event(Change,txtmultcomments_Change)
+Gui.frmContract.txtmultcomments.TabStop(True)
+Gui.frmContract.txtmultcomments.TabIndex(29)
+Gui.frmContract.txtFinance.Create(TextBox,"",True,142,22,0,915,244,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtFinance.MaxLength(20)
+Gui.frmContract.txtFinance.Event(Change,txtFinance_Change)
+Gui.frmContract.txtFinance.TabStop(True)
+Gui.frmContract.txtFinance.TabIndex(27)
+Gui.frmContract.lbl26.Create(Label,"Ship Approval",True,79,16,0,836,430,True,0,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbl26.BorderStyle(0)
+Gui.frmContract.lbl27.Create(Label,"Base Approval",True,81,16,0,930,431,True,0,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbl27.BorderStyle(0)
+Gui.frmContract.lbl28.Create(Label,"Install Approval",True,88,16,0,1021,431,True,0,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbl28.BorderStyle(0)
+Gui.frmContract.ddlshipapproval.Create(DropDownList)
+Gui.frmContract.ddlshipapproval.Enabled(True)
+Gui.frmContract.ddlshipapproval.Visible(True)
+Gui.frmContract.ddlshipapproval.Zorder(0)
+Gui.frmContract.ddlshipapproval.Size(40,22)
+Gui.frmContract.ddlshipapproval.Position(855,451)
+Gui.frmContract.ddlshipapproval.FontName("Tahoma")
+Gui.frmContract.ddlshipapproval.FontSize(7.8)
+Gui.frmContract.ddlshipapproval.Event(Change,ddlshipapproval_Change)
+Gui.frmContract.ddlshipapproval.TabStop(True)
+Gui.frmContract.ddlshipapproval.TabIndex(37)
+Gui.frmContract.ddlbaseapproval.Create(DropDownList)
+Gui.frmContract.ddlbaseapproval.Enabled(True)
+Gui.frmContract.ddlbaseapproval.Visible(True)
+Gui.frmContract.ddlbaseapproval.Zorder(0)
+Gui.frmContract.ddlbaseapproval.Size(40,22)
+Gui.frmContract.ddlbaseapproval.Position(948,451)
+Gui.frmContract.ddlbaseapproval.FontName("Tahoma")
+Gui.frmContract.ddlbaseapproval.FontSize(7.8)
+Gui.frmContract.ddlbaseapproval.Event(Change,ddlbaseapproval_Change)
+Gui.frmContract.ddlbaseapproval.TabStop(True)
+Gui.frmContract.ddlbaseapproval.TabIndex(38)
+Gui.frmContract.ddlinstallapproval.Create(DropDownList)
+Gui.frmContract.ddlinstallapproval.Enabled(True)
+Gui.frmContract.ddlinstallapproval.Visible(True)
+Gui.frmContract.ddlinstallapproval.Zorder(0)
+Gui.frmContract.ddlinstallapproval.Size(40,22)
+Gui.frmContract.ddlinstallapproval.Position(1041,451)
+Gui.frmContract.ddlinstallapproval.FontName("Tahoma")
+Gui.frmContract.ddlinstallapproval.FontSize(7.8)
+Gui.frmContract.ddlinstallapproval.Event(Change,ddlinstallapproval_Change)
+Gui.frmContract.ddlinstallapproval.TabStop(True)
+Gui.frmContract.ddlinstallapproval.TabIndex(39)
+Gui.frmContract.lbl31.Create(Label,"Payment Terms",True,96,16,0,54,441,True,1,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbl31.BorderStyle(0)
+Gui.frmContract.lbl32.Create(Label,"Miscellaneous Terms",True,120,16,0,30,470,True,1,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbl32.BorderStyle(0)
+Gui.frmContract.lbl33.Create(Label,"Anticipated Delivery Date",True,142,16,0,9,499,True,1,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbl33.BorderStyle(0)
+Gui.frmContract.lbl34.Create(Label,"Price good thru",True,87,16,0,48,536,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl34.BorderStyle(0)
+Gui.frmContract.lbl35.Create(Label,"Crop",True,27,16,0,156,536,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl35.BorderStyle(0)
+Gui.frmContract.lbl36.Create(Label,"Dept",True,26,16,0,267,536,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl36.BorderStyle(0)
+Gui.frmContract.lbl37.Create(Label,"UCC Property",True,76,16,0,74,594,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl37.BorderStyle(0)
+Gui.frmContract.txtpaymentterms.Create(TextBox,"Balance Due on Installation",True,178,22,0,159,440,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtpaymentterms.Event(Change,txtpaymentterms_Change)
+Gui.frmContract.txtpaymentterms.MaxLength(30)
+Gui.frmContract.txtpaymentterms.TabStop(True)
+Gui.frmContract.txtpaymentterms.TabIndex(30)
+Gui.frmContract.txtmiscterms.Create(TextBox,"",True,178,22,0,159,469,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtmiscterms.Event(Change,txtmiscterms_Change)
+Gui.frmContract.txtmiscterms.MaxLength(50)
+Gui.frmContract.txtmiscterms.TabStop(True)
+Gui.frmContract.txtmiscterms.TabIndex(31)
+Gui.frmContract.lbl38.Create(Label,"Sold By",True,42,16,0,384,536,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl38.BorderStyle(0)
+Gui.frmContract.dtpPricegood.Create(DatePicker)
+Gui.frmContract.dtpPricegood.Enabled(True)
+Gui.frmContract.dtpPricegood.Visible(True)
+Gui.frmContract.dtpPricegood.Zorder(0)
+Gui.frmContract.dtpPricegood.Size(92,22)
+Gui.frmContract.dtpPricegood.Position(48,554)
+Gui.frmContract.dtpPricegood.CheckBox(False)
+Gui.frmContract.dtpPricegood.FontName("Tahoma")
+Gui.frmContract.dtpPricegood.FontSize(7.8)
+Gui.frmContract.dtpPricegood.Event(Change,dtpPricegood_Change)
+Gui.frmContract.dtpPricegood.TabStop(True)
+Gui.frmContract.dtpPricegood.TabIndex(45)
+Gui.frmContract.dtpPricegood.AllowBlank(True)
+Gui.frmContract.dtpPricegood.Value()
+Gui.frmContract.txtcrop.Create(TextBox,"",True,103,22,0,154,554,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtcrop.Event(Change,txtcrop_Change)
+Gui.frmContract.txtcrop.MaxLength(10)
+Gui.frmContract.txtcrop.TabStop(True)
+Gui.frmContract.txtcrop.TabIndex(46)
+Gui.frmContract.txtdept.Create(TextBox,"",True,109,22,0,264,554,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtdept.Event(Change,txtdept_Change)
+Gui.frmContract.txtdept.MaxLength(20)
+Gui.frmContract.txtdept.TabStop(True)
+Gui.frmContract.txtdept.TabIndex(47)
+Gui.frmContract.txtsold.Create(TextBox,"",True,101,22,0,384,554,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtsold.Event(Change,txtsold_Change)
+Gui.frmContract.txtsold.MaxLength(20)
+Gui.frmContract.txtsold.TabStop(True)
+Gui.frmContract.txtsold.TabIndex(48)
+Gui.frmContract.txtUCCproperty.Create(TextBox,"",True,596,22,0,154,593,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtUCCproperty.Event(Change,txtUCCproperty_Change)
+Gui.frmContract.txtUCCproperty.MaxLength(30)
+Gui.frmContract.txtUCCproperty.TabStop(True)
+Gui.frmContract.txtUCCproperty.TabIndex(51)
+Gui.frmContract.lbldealerpayterms.Create(Label,"Dealer Payment Terms",True,131,16,0,399,441,True,1,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbldealerpayterms.BorderStyle(0)
+Gui.frmContract.lbldealerMisc.Create(Label,"Dealer Misc Terms",True,107,16,0,423,470,True,1,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbldealerMisc.BorderStyle(0)
+Gui.frmContract.lbldealeranti.Create(Label,"Dealer Anticipated Del Date",True,156,16,0,374,499,True,1,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbldealeranti.BorderStyle(0)
+Gui.frmContract.lbl42.Create(Label,"Emailed to",True,85,16,0,517,554,True,1,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbl42.BorderStyle(0)
+Gui.frmContract.lbl43.Create(Label,"Email Date",True,65,16,0,866,552,True,1,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbl43.BorderStyle(0)
+Gui.frmContract.txtdPaymentTerms.Create(TextBox,"",True,213,22,0,539,440,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtdPaymentTerms.MaxLength(30)
+Gui.frmContract.txtdPaymentTerms.TabStop(True)
+Gui.frmContract.txtdPaymentTerms.TabIndex(33)
+Gui.frmContract.txtdmiscterms.Create(TextBox,"Pricing EXW Union Gap Washington USA",True,213,22,0,539,469,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtdmiscterms.Event(Change,txtdmiscterms_Change)
+Gui.frmContract.txtdmiscterms.MaxLength(50)
+Gui.frmContract.txtdmiscterms.TabStop(True)
+Gui.frmContract.txtdmiscterms.TabIndex(34)
+Gui.frmContract.txEmailTo.Create(TextBox,"",True,141,22,0,611,552,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txEmailTo.Event(Change,txtEmailTo_Change)
+Gui.frmContract.txEmailTo.MaxLength(30)
+Gui.frmContract.txEmailTo.TabStop(True)
+Gui.frmContract.txEmailTo.TabIndex(50)
+Gui.frmContract.dtpMaildt.Create(DatePicker)
+Gui.frmContract.dtpMaildt.Enabled(True)
+Gui.frmContract.dtpMaildt.Visible(True)
+Gui.frmContract.dtpMaildt.Zorder(0)
+Gui.frmContract.dtpMaildt.Size(92,22)
+Gui.frmContract.dtpMaildt.Position(940,552)
+Gui.frmContract.dtpMaildt.CheckBox(False)
+Gui.frmContract.dtpMaildt.FontName("Tahoma")
+Gui.frmContract.dtpMaildt.FontSize(7.8)
+Gui.frmContract.dtpMaildt.Event(Change,dtpMaildt_Change)
+Gui.frmContract.dtpMaildt.TabStop(True)
+Gui.frmContract.dtpMaildt.TabIndex(43)
+Gui.frmContract.dtpMaildt.AllowBlank(True)
+Gui.frmContract.dtpMaildt.Value()
+Gui.frmContract.dtpDSchShipDt.Create(DatePicker)
+Gui.frmContract.dtpDSchShipDt.Enabled(True)
+Gui.frmContract.dtpDSchShipDt.Visible(True)
+Gui.frmContract.dtpDSchShipDt.Zorder(0)
+Gui.frmContract.dtpDSchShipDt.Size(92,22)
+Gui.frmContract.dtpDSchShipDt.Position(659,520)
+Gui.frmContract.dtpDSchShipDt.CheckBox(False)
+Gui.frmContract.dtpDSchShipDt.FontName("Tahoma")
+Gui.frmContract.dtpDSchShipDt.FontSize(7.8)
+Gui.frmContract.dtpDSchShipDt.Event(Change,dtpDSchShipDt_Change)
+Gui.frmContract.dtpDSchShipDt.TabStop(True)
+Gui.frmContract.dtpDSchShipDt.TabIndex(36)
+Gui.frmContract.dtpDSchShipDt.AllowBlank(True)
+Gui.frmContract.dtpDSchShipDt.Value()
+Gui.frmContract.lbldealerschdate.Create(Label,"Dealer Scheduled Ship Date",True,159,16,0,645,499,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbldealerschdate.BorderStyle(0)
+Gui.frmContract.lbl47.Create(Label,"Extended Warranty",True,109,16,0,927,501,True,0,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbl47.BorderStyle(0)
+Gui.frmContract.ddlextwarranty.Create(DropDownList)
+Gui.frmContract.ddlextwarranty.Enabled(True)
+Gui.frmContract.ddlextwarranty.Visible(True)
+Gui.frmContract.ddlextwarranty.Zorder(0)
+Gui.frmContract.ddlextwarranty.Size(40,22)
+Gui.frmContract.ddlextwarranty.Position(960,520)
+Gui.frmContract.ddlextwarranty.FontName("Tahoma")
+Gui.frmContract.ddlextwarranty.FontSize(7.8)
+Gui.frmContract.ddlextwarranty.Event(Change,ddlextwarranty_Change)
+Gui.frmContract.ddlextwarranty.TabStop(True)
+Gui.frmContract.ddlextwarranty.TabIndex(42)
+Gui.frmContract.cmdMSave.Create(Button)
+Gui.frmContract.cmdMSave.Enabled(True)
+Gui.frmContract.cmdMSave.Visible(True)
+Gui.frmContract.cmdMSave.Zorder(0)
+Gui.frmContract.cmdMSave.Size(94,29)
+Gui.frmContract.cmdMSave.Position(995,8)
+Gui.frmContract.cmdMSave.Caption("Save")
+Gui.frmContract.cmdMSave.FontName("Tahoma")
+Gui.frmContract.cmdMSave.FontSize(7.8)
+Gui.frmContract.cmdMSave.Event(Click,cmdMSave_Click)
+Gui.frmContract.cmdMSave.TabStop(True)
+Gui.frmContract.cmdMSave.TabIndex(52)
+Gui.frmContract.cmdMPrint.Create(Button)
+Gui.frmContract.cmdMPrint.Enabled(True)
+Gui.frmContract.cmdMPrint.Visible(True)
+Gui.frmContract.cmdMPrint.Zorder(0)
+Gui.frmContract.cmdMPrint.Size(94,29)
+Gui.frmContract.cmdMPrint.Position(995,45)
+Gui.frmContract.cmdMPrint.Caption("Print")
+Gui.frmContract.cmdMPrint.FontName("Tahoma")
+Gui.frmContract.cmdMPrint.FontSize(7.8)
+Gui.frmContract.cmdMPrint.Event(Click,cmdMPrint_Click)
+Gui.frmContract.cmdMPrint.TabStop(True)
+Gui.frmContract.cmdMPrint.TabIndex(53)
+Gui.frmContract.dtpshipApproval.Create(DatePicker)
+Gui.frmContract.dtpshipApproval.Enabled(True)
+Gui.frmContract.dtpshipApproval.Visible(True)
+Gui.frmContract.dtpshipApproval.Zorder(0)
+Gui.frmContract.dtpshipApproval.Size(92,22)
+Gui.frmContract.dtpshipApproval.Position(822,478)
+Gui.frmContract.dtpshipApproval.CheckBox(False)
+Gui.frmContract.dtpshipApproval.FontName("Tahoma")
+Gui.frmContract.dtpshipApproval.FontSize(7.8)
+Gui.frmContract.dtpshipApproval.Event(Change,dtpshipApproval_Change)
+Gui.frmContract.dtpshipApproval.TabStop(True)
+Gui.frmContract.dtpshipApproval.TabIndex(40)
+Gui.frmContract.dtpshipApproval.AllowBlank(True)
+Gui.frmContract.dtpshipApproval.Value()
+Gui.frmContract.dtpInstallApproval.Create(DatePicker)
+Gui.frmContract.dtpInstallApproval.Enabled(True)
+Gui.frmContract.dtpInstallApproval.Visible(True)
+Gui.frmContract.dtpInstallApproval.Zorder(0)
+Gui.frmContract.dtpInstallApproval.Size(92,22)
+Gui.frmContract.dtpInstallApproval.Position(1012,478)
+Gui.frmContract.dtpInstallApproval.CheckBox(False)
+Gui.frmContract.dtpInstallApproval.FontName("Tahoma")
+Gui.frmContract.dtpInstallApproval.FontSize(7.8)
+Gui.frmContract.dtpInstallApproval.Event(Change,dtpInstallApproval_Change)
+Gui.frmContract.dtpInstallApproval.TabStop(True)
+Gui.frmContract.dtpInstallApproval.TabIndex(41)
+Gui.frmContract.dtpInstallApproval.AllowBlank(True)
+Gui.frmContract.dtpInstallApproval.Value()
+Gui.frmContract.lbl29.Create(Label,"Product Line",True,70,16,0,409,13,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl29.BorderStyle(0)
+Gui.frmContract.txtPL.Create(TextBox,"",True,44,22,0,404,33,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtPL.Event(Change,txtPL_Change)
+Gui.frmContract.txtPL.TabStop(True)
+Gui.frmContract.txtPL.TabIndex(5)
+Gui.frmContract.txtPL.MaxLength(2)
+Gui.frmContract.cmdBrowPL.Create(Button)
+Gui.frmContract.cmdBrowPL.Enabled(True)
+Gui.frmContract.cmdBrowPL.Visible(True)
+Gui.frmContract.cmdBrowPL.Zorder(0)
+Gui.frmContract.cmdBrowPL.Size(31,17)
+Gui.frmContract.cmdBrowPL.Position(451,31)
+Gui.frmContract.cmdBrowPL.Caption("^")
+Gui.frmContract.cmdBrowPL.FontName("Tahoma")
+Gui.frmContract.cmdBrowPL.FontSize(7.8)
+Gui.frmContract.cmdBrowPL.Event(Click,cmdBrowPL_Click)
+Gui.frmContract.cmdBrowPL.TabStop(True)
+Gui.frmContract.cmdBrowPL.TabIndex(6)
+Gui.frmContract.cmdBrowDPO.Create(Button)
+Gui.frmContract.cmdBrowDPO.Enabled(True)
+Gui.frmContract.cmdBrowDPO.Visible(True)
+Gui.frmContract.cmdBrowDPO.Zorder(0)
+Gui.frmContract.cmdBrowDPO.Size(31,17)
+Gui.frmContract.cmdBrowDPO.Position(866,86)
+Gui.frmContract.cmdBrowDPO.Caption("^")
+Gui.frmContract.cmdBrowDPO.FontName("Tahoma")
+Gui.frmContract.cmdBrowDPO.FontSize(7.8)
+Gui.frmContract.cmdBrowDPO.Event(Click,cmdBrowDSO_Click)
+Gui.frmContract.cmdBrowDPO.TabStop(True)
+Gui.frmContract.cmdBrowDPO.TabIndex(14)
+Gui.frmContract.cmdRefresh.Create(Button)
+Gui.frmContract.cmdRefresh.Enabled(True)
+Gui.frmContract.cmdRefresh.Visible(True)
+Gui.frmContract.cmdRefresh.Zorder(0)
+Gui.frmContract.cmdRefresh.Size(94,30)
+Gui.frmContract.cmdRefresh.Position(995,82)
+Gui.frmContract.cmdRefresh.Caption("Refresh")
+Gui.frmContract.cmdRefresh.FontName("Tahoma")
+Gui.frmContract.cmdRefresh.FontSize(7.8)
+Gui.frmContract.cmdRefresh.Event(Click,cmdRefresh_Click)
+Gui.frmContract.cmdRefresh.TabStop(True)
+Gui.frmContract.cmdRefresh.TabIndex(54)
+Gui.frmContract.txtAdeliverydate.Create(TextBox,"",True,178,22,0,159,498,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtAdeliverydate.MaxLength(20)
+Gui.frmContract.txtAdeliverydate.TabStop(True)
+Gui.frmContract.txtAdeliverydate.TabIndex(32)
+Gui.frmContract.ddlCash.Create(DropDownList)
+Gui.frmContract.ddlCash.Enabled(True)
+Gui.frmContract.ddlCash.Visible(True)
+Gui.frmContract.ddlCash.Zorder(0)
+Gui.frmContract.ddlCash.Size(142,22)
+Gui.frmContract.ddlCash.Position(916,279)
+Gui.frmContract.ddlCash.FontName("Tahoma")
+Gui.frmContract.ddlCash.FontSize(7.8)
+Gui.frmContract.ddlCash.TabStop(True)
+Gui.frmContract.ddlCash.TabIndex(28)
+Gui.frmContract.txtCustomerAddl.Create(TextBox,"",False,275,22,0,11,163,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtCustomerAddl.MaxLength(50)
+Gui.frmContract.cmdBrowsalesperson.Create(Button)
+Gui.frmContract.cmdBrowsalesperson.Enabled(True)
+Gui.frmContract.cmdBrowsalesperson.Visible(True)
+Gui.frmContract.cmdBrowsalesperson.Zorder(0)
+Gui.frmContract.cmdBrowsalesperson.Size(31,17)
+Gui.frmContract.cmdBrowsalesperson.Position(491,551)
+Gui.frmContract.cmdBrowsalesperson.Caption("^")
+Gui.frmContract.cmdBrowsalesperson.FontName("Tahoma")
+Gui.frmContract.cmdBrowsalesperson.FontSize(7.8)
+Gui.frmContract.cmdBrowsalesperson.Event(Click,cmdBrowsalesperson_Click)
+Gui.frmContract.cmdBrowsalesperson.TabStop(True)
+Gui.frmContract.cmdBrowsalesperson.TabIndex(49)
+Gui.frmContract.txtdealerPO.Create(TextBox,"",True,117,22,0,631,88,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtdealerPO.MaxLength(20)
+Gui.frmContract.txtdealerPO.TabStop(True)
+Gui.frmContract.txtdealerPO.TabIndex(12)
+Gui.frmContract.lbldealerPO.Create(Label,"Dealer PO",True,57,16,0,631,69,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbldealerPO.BorderStyle(0)
+Gui.frmContract.cmdBrowPaymentTerms.Create(Button)
+Gui.frmContract.cmdBrowPaymentTerms.Enabled(True)
+Gui.frmContract.cmdBrowPaymentTerms.Visible(True)
+Gui.frmContract.cmdBrowPaymentTerms.Zorder(0)
+Gui.frmContract.cmdBrowPaymentTerms.Size(31,17)
+Gui.frmContract.cmdBrowPaymentTerms.Position(343,436)
+Gui.frmContract.cmdBrowPaymentTerms.Caption("^")
+Gui.frmContract.cmdBrowPaymentTerms.FontName("Tahoma")
+Gui.frmContract.cmdBrowPaymentTerms.FontSize(7.8)
+Gui.frmContract.cmdBrowPaymentTerms.Event(Click,cmdBrowPaymentTerms_Click)
+Gui.frmContract.lbl22.Create(Label,"Contract Date",True,78,16,0,408,69,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl22.BorderStyle(0)
+Gui.frmContract.dtpcontractdt.Create(DatePicker)
+Gui.frmContract.dtpcontractdt.Enabled(True)
+Gui.frmContract.dtpcontractdt.Visible(True)
+Gui.frmContract.dtpcontractdt.Zorder(0)
+Gui.frmContract.dtpcontractdt.Size(85,22)
+Gui.frmContract.dtpcontractdt.Position(404,88)
+Gui.frmContract.dtpcontractdt.CheckBox(False)
+Gui.frmContract.dtpcontractdt.FontName("Tahoma")
+Gui.frmContract.dtpcontractdt.FontSize(7.8)
+Gui.frmContract.dtpcontractdt.AllowBlank(True)
+Gui.frmContract.dtpcontractdt.Value()
+Gui.frmContract.dtpcontractdt.TabStop(True)
+Gui.frmContract.dtpcontractdt.TabIndex(10)
+Gui.frmContract.lbl44.Create(Label,"Sales Tax",True,61,16,0,869,590,True,1,"Tahoma",7.8,,0,1)
+Gui.frmContract.lbl44.BorderStyle(0)
+Gui.frmContract.txtSalesTax.Create(TextBox,"",True,93,22,0,941,590,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtSalesTax.MaxLength(20)
+Gui.frmContract.txtSalesTax.NumericOnly(1)
+Gui.frmContract.txtSalesTax.TabStop(True)
+Gui.frmContract.txtSalesTax.TabIndex(44)
+Gui.frmContract.lbl30.Create(Label,"Email",True,31,16,0,918,192,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl30.BorderStyle(0)
+Gui.frmContract.txtEmail.Create(TextBox,"",True,142,22,0,915,211,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtEmail.Locked(True)
+Gui.frmContract.txtEmail.TabStop(True)
+Gui.frmContract.txtEmail.TabIndex(26)
+Gui.frmContract.dtpDAdeliverydate.Create(TextBox,"",True,101,22,0,539,498,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.dtpDAdeliverydate.TabStop(True)
+Gui.frmContract.dtpDAdeliverydate.TabIndex(32)
+Gui.frmContract.dtpDAdeliverydate.MaxLength(20)
+Gui.frmContract.lbl17.Create(Label,"Revision Print",True,77,16,0,912,122,True,0,"Tahoma",7.8,,0,0)
+Gui.frmContract.lbl17.BorderStyle(0)
+Gui.frmContract.txtRevisionPrint.Create(TextBox,"",True,143,22,0,913,139,True,0,"Tahoma",7.8,,1)
+Gui.frmContract.txtRevisionPrint.TabStop(True)
+Gui.frmContract.txtRevisionPrint.TabIndex(19)
+Gui.frmContract.txtRevisionPrint.MaxLength(20)
+Gui.frmPrint..Create(BaseForm)
+Gui.frmPrint..Caption("Print Dialog")
+Gui.frmPrint..Size(460,196)
+Gui.frmPrint..MinX(0)
+Gui.frmPrint..MinY(0)
+Gui.frmPrint..Position(0,0)
+Gui.frmPrint..AlwaysOnTop(False)
+Gui.frmPrint..FontName("Tahoma")
+Gui.frmPrint..FontSize(8.25)
+Gui.frmPrint..ControlBox(True)
+Gui.frmPrint..MaxButton(False)
+Gui.frmPrint..MinButton(False)
+Gui.frmPrint..MousePointer(0)
+Gui.frmPrint..Moveable(True)
+Gui.frmPrint..Sizeable(False)
+Gui.frmPrint..ShowInTaskBar(True)
+Gui.frmPrint..TitleBar(True)
+Gui.frmPrint..Event(UnLoad,frmPrint_UnLoad)
+Gui.frmPrint.cmdPrint.Create(Button)
+Gui.frmPrint.cmdPrint.Enabled(True)
+Gui.frmPrint.cmdPrint.Visible(True)
+Gui.frmPrint.cmdPrint.Zorder(0)
+Gui.frmPrint.cmdPrint.Size(94,25)
+Gui.frmPrint.cmdPrint.Position(344,8)
+Gui.frmPrint.cmdPrint.Caption("Print")
+Gui.frmPrint.cmdPrint.FontName("Tahoma")
+Gui.frmPrint.cmdPrint.FontSize(7.8)
+Gui.frmPrint.cmdPrint.Event(Click,cmdPrint_Click)
+Gui.frmPrint.cmdCancel.Create(Button)
+Gui.frmPrint.cmdCancel.Enabled(True)
+Gui.frmPrint.cmdCancel.Visible(True)
+Gui.frmPrint.cmdCancel.Zorder(0)
+Gui.frmPrint.cmdCancel.Size(94,28)
+Gui.frmPrint.cmdCancel.Position(345,104)
+Gui.frmPrint.cmdCancel.Caption("Cancel")
+Gui.frmPrint.cmdCancel.FontName("Tahoma")
+Gui.frmPrint.cmdCancel.FontSize(7.8)
+Gui.frmPrint.cmdCancel.Event(Click,cmdCancel_Click)
+Gui.frmPrint.cmdSelAll.Create(Button)
+Gui.frmPrint.cmdSelAll.Enabled(True)
+Gui.frmPrint.cmdSelAll.Visible(True)
+Gui.frmPrint.cmdSelAll.Zorder(0)
+Gui.frmPrint.cmdSelAll.Size(94,25)
+Gui.frmPrint.cmdSelAll.Position(344,39)
+Gui.frmPrint.cmdSelAll.Caption("Select ALL")
+Gui.frmPrint.cmdSelAll.FontName("Tahoma")
+Gui.frmPrint.cmdSelAll.FontSize(7.8)
+Gui.frmPrint.cmdSelAll.Event(Click,cmdSelAll_Click)
+Gui.frmPrint.cmdDSelAll.Create(Button)
+Gui.frmPrint.cmdDSelAll.Enabled(True)
+Gui.frmPrint.cmdDSelAll.Visible(True)
+Gui.frmPrint.cmdDSelAll.Zorder(0)
+Gui.frmPrint.cmdDSelAll.Size(94,26)
+Gui.frmPrint.cmdDSelAll.Position(344,70)
+Gui.frmPrint.cmdDSelAll.Caption("Deselect ALL")
+Gui.frmPrint.cmdDSelAll.FontName("Tahoma")
+Gui.frmPrint.cmdDSelAll.FontSize(7.8)
+Gui.frmPrint.cmdDSelAll.Event(Click,cmdDSelAll_Click)
+Gui.frmPrint.GsGridPrint.Create(GsGridControl)
+Gui.frmPrint.GsGridPrint.Enabled(True)
+Gui.frmPrint.GsGridPrint.Visible(True)
+Gui.frmPrint.GsGridPrint.Zorder(0)
+Gui.frmPrint.GsGridPrint.Size(322,127)
+Gui.frmPrint.GsGridPrint.Position(13,12)
+Gui.frmRevision..Create(BaseForm)
+Gui.frmRevision..Caption("Revision")
+Gui.frmRevision..Size(765,529)
+Gui.frmRevision..MinX(0)
+Gui.frmRevision..MinY(0)
+Gui.frmRevision..Position(0,0)
+Gui.frmRevision..AlwaysOnTop(False)
+Gui.frmRevision..FontName("Tahoma")
+Gui.frmRevision..FontSize(8.25)
+Gui.frmRevision..ControlBox(True)
+Gui.frmRevision..MaxButton(False)
+Gui.frmRevision..MinButton(False)
+Gui.frmRevision..MousePointer(0)
+Gui.frmRevision..Moveable(True)
+Gui.frmRevision..Sizeable(False)
+Gui.frmRevision..ShowInTaskBar(True)
+Gui.frmRevision..TitleBar(True)
+Gui.frmRevision..Event(UnLoad,frmRevision_UnLoad)
+Gui.frmRevision.GsGridRevision.Create(GsGridControl)
+Gui.frmRevision.GsGridRevision.Enabled(True)
+Gui.frmRevision.GsGridRevision.Visible(True)
+Gui.frmRevision.GsGridRevision.Zorder(0)
+Gui.frmRevision.GsGridRevision.Size(742,445)
+Gui.frmRevision.GsGridRevision.Position(10,28)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+	v.Global.sIntercompany.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+
+f.Intrinsic.Control.Try
+v.Global.bNew.Declare
+v.Global.bLoad.Declare
+v.Global.bParent.Declare
+v.Global.sCompyCode.Declare
+v.Global.bContract.Declare
+v.Global.sPCompyCode.Declare
+v.Global.sDCompyCode.Declare
+v.Global.sPOrder.Declare
+v.Global.fCredit.Declare
+v.Global.fDEPOSIT.Declare
+v.Global.fDISCOUNT.Declare
+v.Global.sTRADE-DESC.Declare
+v.Global.fCreditDealer.Declare
+
+
+'V.local.sDocumentList.Declare
+'V.Local.sQuery.Declare
+'V.Local.sCallerVars.Declare
+'V.Local.iret.Declare
+
+''V.Local.sCallerVars.Set("0000023")
+'F.ODBC.Connection!conx.OpenCompanyConnection(300)
+'F.Intrinsic.String.Concat("select CONCAT(rtrim(A."PATH"),rtrim(file)) from ATG_DOC_ASSOC A join LINK_DATA D on CAST(D.link_ID AS integer) = A.link_ID  where  type = '00045' and ID = '0000003' and ucase(file) like '%PDF'",V.Local.sCallerVars,V.Local.sQuery)
+
+'f.Data.Datatable.CreateFromSQL("DTLink","conx",V.Local.sQuery)
+'f.Data.Dataview.Create("DTLink","DVLink")
+'Function.Data.DataView.ToString("DTLink","DVLink","","*!*",V.local.sDocumentList)
+''F.ODBC.Connection!conx.OpenRecordsetRO("rstLinkID",V.Local.sQuery)
+''F.Intrinsic.Control.If(V.ODBC.conx!rstLinkID.EOF,=,False)
+''	V.Local.iret.Set(V.ODBC.conx!rstLinkID.FieldVal!LINK_ID)
+''	F.Global.DocumentControl.GetAllDocumentIDs(V.Local.iret,V.local.sDocumentList)
+''F.Intrinsic.Control.EndIf
+
+''F.ODBC.Connection!conx.Close
+
+''V.Local.iret.Set(V.ODBC.conx!rstLinkID.FieldVal!LINK_ID)
+
+''F.Global.DocumentControl.GetAllDocumentIDs("000000027",V.local.sDocumentList)
+
+
+'Function.Data.DataView.ToString("DTLink","DVLink","","*!*",V.local.sDocumentList)
+
+'f.Intrinsic.UI.Msgbox(V.local.sDocumentList)
+'Function.Intrinsic.Debug.Stop
+
+
+v.Local.sOrderno.Declare
+V.Local.sParams.Declare
+V.Local.sCustomerNo.Declare
+
+f.Intrinsic.Control.If(v.Caller.Hook,=,11560)
+'Populate
+
+'lblsort2
+'	Variable.Passed.000116.Set("Dealer ContractNo")
+'	Variable.Passed.000116.Set("Ranch/Orchad")
+	'script1 buttn
+	Variable.Passed.000202.Set("Contract")
+f.Intrinsic.Control.elseIf(v.Caller.Hook,=,33001)
+	Variable.Passed.000153.Set("Contract")
+f.Intrinsic.Control.elseIf(v.Caller.Hook,=,33002)
+	f.Intrinsic.String.LPad(Variable.Passed.000002.Trim,"0",7,v.Local.sOrderno)
+	F.Intrinsic.String.Build("{0}!*!{1}",V.Local.sOrderno,V.Local.sCustomerNo,V.Local.sParams)
+f.Intrinsic.Control.elseIf(v.Caller.Hook,=,11920)
+	f.Intrinsic.Control.If(Variable.Passed.000003.Trim,<>,"")
+
+		f.Intrinsic.Control.CallSub(Load_Data)
+		Gui.frmContract..BindTo(Variable.Caller.Handle)
+		gui.frmContract..Show
+	f.Intrinsic.Control.Else
+		f.Intrinsic.UI.Msgbox("Please select order num")
+		f.Intrinsic.Control.end
+	f.Intrinsic.Control.endif
+f.Intrinsic.Control.elseIf(v.Caller.Hook,=,14350)
+	Variable.Passed.000116.Set("Company code")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.frmContract_UnLoad.Start
+f.Intrinsic.Control.Try
+	f.Intrinsic.Control.If(v.ODBC!conx.State, =, 1)
+		f.Data.Datatable.Close("DTPrint")
+		f.Data.Datatable.Close("DTLines")
+		f.Data.Datatable.Close("DTRevision")
+		f.ODBC.Connection!conx.Close
+	f.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.End
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.frmContract_UnLoad.End
+Program.Sub.LoadGrid.Start
+f.Intrinsic.Control.Try
+
+'quantity, part, description, customer price, and dealer price
+v.Local.i.Declare
+v.Local.iTotClmn.Declare
+v.Local.stitle.Declare
+v.Local.sOrderNo.Declare
+v.Local.Ssql.Declare
+v.Local.sFilter.Declare
+
+V.Local.sCurrCmpycode.Declare
+V.Local.sCurrOrdno.Declare
+V.Local.sRemOrdno.Declare
+V.Local.sRemCmpycode.Declare
+V.Local.lQty.Declare
+
+
+f.Intrinsic.Control.If(v.Global.bContract)
+'TO Dealer
+	V.Local.sCurrCmpycode.Set(v.Global.sPCompyCode)
+	V.Local.sCurrOrdno.Set(v.Screen.frmContract!txtOrdno.text)
+	V.Local.sRemOrdno.Set(v.Screen.frmContract!txtdealerSO.text)
+	V.Local.sRemCmpycode.Set(v.Global.sDCompyCode)
+
+	f.Intrinsic.String.Build("select Record_No,convert(Qty_Ordered,SQL_float) as Quantity,Part,Description,convert(Price,SQL_CHAR) as 'CustomerPrice',convert(Cost,SQL_CHAR) as 'DealerPrice' from GLOBAL{0}.order_lines where Record_Type = 'L' and order_no = '{1}' and Flag_BOM <> 'C' order by record_no ",V.Local.sRemCmpycode,V.Local.sRemOrdno,v.Local.ssql)
+	f.Data.Datatable.CreateFromSQL("DTLines","conx",v.Local.Ssql,True)
+
+	f.Intrinsic.String.Build("select Part,convert(Price,SQL_CHAR) as 'Price' from GLOBAL{0}.order_lines where order_no = '{1}' and Record_Type = 'L' and Flag_BOM <> 'C'",V.Local.sCurrCmpycode,V.Local.sCurrOrdno,v.Local.ssql)
+	F.Data.Dictionary.CreateFromSQL("dict", "conx",V.Local.sSQL)
+	F.Data.Dictionary.SetDefaultReturn("dict","0.00")
+	F.Data.DataTable.FillFromDictionary("DTLines", "dict", "Part", "DealerPrice") 
+	F.Data.Dictionary.Close("dict")
+f.Intrinsic.Control.Else
+'TO Customer
+	f.Intrinsic.String.Build("select Record_No,Qty_Ordered as Quantity,Part,Description,Price as 'CustomerPrice',Cost as 'DealerPrice' from v_order_lines where order_no = '{0}' and Flag_BOM <> 'C' order by record_no",v.Screen.frmContract!txtOrdno.text,v.Local.Ssql)	
+	f.Data.Datatable.CreateFromSQL("DTLines","conx",v.Local.Ssql,True)
+f.Intrinsic.Control.endif
+
+
+'''CAST(0 AS DOUBLE) AS
+
+
+'f.Intrinsic.String.Build(CREDIT','DEPOSIT','TRADE-IN','DISCOUNT') or DealerPrice IS NULL","",v.Local.sFilter)
+'f.Intrinsic.String.Build(CREDIT','DEPOSIT','TRADE-IN','DISCOUNT')","",v.Local.sFilter)
+'f.Intrinsic.String.Build(CREDIT','PROGRESS','TRADE-IN','DISCOUNT','BASE CREDIT')","",v.Local.sFilter)
+f.Intrinsic.String.Build("Part IN('TRADE-IN CREDIT','PROGRESS','TRADE-IN','DISCOUNT','BASE CREDIT')","",v.Local.sFilter)
+f.Data.DataView.Create("DTLines","DVLines")
+f.Data.DataView.SetFilter("DTLines","DVLines",v.Local.sFilter)
+f.Intrinsic.Control.If(v.DataView.DTLines!DVLines.RowCount,>,0)
+'	f.Data.DataView.SetValue("DTLines","DVLines",-1,"Description","")
+''	f.Data.DataView.SetValue("DTLines","DVLines",-1,"Quantity",v.Ambient.DBNULL)
+''	f.Data.DataView.SetValue("DTLines","DVLines",-1,"DealerPrice",v.Ambient.DBNULL)
+	
+	f.Intrinsic.Control.For(v.Local.i,0,v.DataView.DTLines!DVLines.RowCount--,1)
+
+		f.Intrinsic.Control.if(v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"TRADE-IN CREDIT","or",v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"TRADE-IN",v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"BASE CREDIT")
+'			f.Intrinsic.Math.Abs(v.DataView.DTLines!DVLines(v.Local.i).Quantity!Fieldval,V.Local.lQty)
+			V.Local.lQty.Set(v.DataView.DTLines!DVLines(v.Local.i).Quantity!Fieldval)
+			v.Global.fCredit.set(v.DataView.DTLines!DVLines(v.Local.i).CustomerPrice!Fieldval)
+			f.Intrinsic.Math.Mult(v.Global.fCredit,V.Local.lQty,v.Global.fCredit)
+			v.Global.sTRADE-DESC.Set(v.DataView.DTLines!DVLines(v.Local.i).Description!Fieldval)
+			v.Global.fCreditDealer.set(v.DataView.DTLines!DVLines(v.Local.i).DealerPrice!Fieldval)
+			f.Intrinsic.Math.Mult(v.Global.fCreditDealer,V.Local.lQty,v.Global.fCreditDealer)
+'		f.Intrinsic.Control.elseif(v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"DEPOSIT")
+		f.Intrinsic.Control.elseif(v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"PROGRESS")
+		f.Intrinsic.Control.andif(v.DataView.DTLines!DVLines(v.Local.i).Description!Fieldvaltrim,=,"DEPOSIT")
+			v.Global.fDEPOSIT.Set(v.DataView.DTLines!DVLines(v.Local.i).CustomerPrice!Fieldval)
+			V.Local.lQty.Set(v.DataView.DTLines!DVLines(v.Local.i).Quantity!Fieldval)
+			f.Intrinsic.Math.Mult(v.Global.fDEPOSIT,V.Local.lQty,v.Global.fDEPOSIT)
+		f.Intrinsic.Control.elseif(v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"DISCOUNT")
+			v.Global.fDISCOUNT.Set(v.DataView.DTLines!DVLines(v.Local.i).CustomerPrice!Fieldval)
+		f.Intrinsic.Control.endif
+	f.Intrinsic.Control.Next(v.Local.i)
+f.Intrinsic.Control.EndIf
+f.Data.DataView.Close("DTLines","DVLines")
+
+
+F.Data.DataTable.AddColumn("DTLines","Trml","long",v.Caller.Terminal)
+F.Data.DataTable.AddColumn("DTLines","Order_No","string",v.Screen.frmContract!txtOrdno.text)
+'F.Data.DataTable.AddColumn("DTLines","CustomerPrice","float")
+'F.Data.DataTable.AddColumn("DTLines","DealerPrice","float")
+
+'F.Data.DataTable.SaveToDB("DTLines","conx","GCG_5963_Rpt","Trml*!*Order_No*!*Part",256,"Order_No@!@Order_No*!*Trml@!@Trml*!*Part@!@Part*!*CustomerPrice@!@Cust_Price*!*DealerPrice@!@Dealer_Price*!*Quantity@!@Qty*!*Description@!@Part_Desc")
+
+
+gui.frmContract.GsGridContract.AddGridviewFromDatatable("GridView","DTLines")
+
+gui.frmContract.GsGridContract.GetColumnCount("GridView",v.Local.iTotClmn)
+f.Intrinsic.Math.Sub(v.Local.iTotClmn,1,v.Local.iTotClmn)
+f.Intrinsic.Control.For(v.Local.i,0,v.Local.iTotClmn,1)
+	gui.frmContract.GsGridContract.GetColumnNamebyIndex("GridView",v.Local.i,v.Local.stitle)
+	gui.frmContract.GsGridContract.SetColumnProperty("GridView",v.Local.stitle,"AllowEdit",False)
+	gui.frmContract.GsGridContract.SetColumnProperty("GridView",v.Local.stitle,"ReadOnly",True)
+
+	gui.frmContract.GsGridContract.SetColumnProperty("GridView",v.Local.stitle,"HeaderFontBold","True")
+	gui.frmContract.GsGridContract.SetColumnProperty("GridView",v.Local.stitle,"HeaderBackColor","LIGHTBLUE")
+'	gui.frmContract.GsGridContract.SetColumnProperty("GridView",v.Local.stitle,"HeaderHAlignment","Center")
+	gui.frmContract.GsGridContract.SetColumnProperty("GridView",v.Local.stitle,"HeaderWordWrap","wrap")
+f.Intrinsic.Control.Next(v.Local.i)
+
+gui.frmContract.GsGridContract.SetGridViewProperty("GridView", "Enableappearanceevenrow", "True")
+gui.frmContract.GsGridContract.SetGridViewProperty("GridView", "Editable", False)
+gui.frmContract.GsGridContract.SetGridViewProperty("GridView", "Readonly", True)
+gui.frmContract.GsGridContract.SetGridViewProperty("GridView", "MultiSelectMode", 0)
+
+gui.frmContract.GsGridContract.SetColumnProperty("GridView","Part","MaxWidth",120)
+gui.frmContract.GsGridContract.SetColumnProperty("GridView","Quantity","MaxWidth",80)
+gui.frmContract.GsGridContract.SetColumnProperty("GridView","DealerPrice","MaxWidth",120)
+gui.frmContract.GsGridContract.SetColumnProperty("GridView","CustomerPrice","MaxWidth",120)
+'gui.frmContract.GsGridContract.SetColumnProperty("GridView","Description","MaxWidth",150)
+
+
+gui.frmContract.GsGridContract.SetColumnProperty("GridView","Record_No","visible","False")
+gui.frmContract.GsGridContract.SetColumnProperty("GridView","Trml","visible","False")
+gui.frmContract.GsGridContract.SetColumnProperty("GridView","Order_No","visible","False")
+
+gui.frmContract.GsGridContract.SetColumnProperty("GridView","DealerPrice","CellHAlignment","Far")
+gui.frmContract.GsGridContract.SetColumnProperty("GridView","CustomerPrice","CellHAlignment","Far")
+gui.frmContract.GsGridContract.SetColumnProperty("GridView","Quantity","CellHAlignment","Center")
+
+f.Intrinsic.Control.If(v.Global.bContract,=,False)
+	gui.frmContract.GsGridContract.SetColumnProperty("GridView","DealerPrice","visible","False")
+f.Intrinsic.Control.EndIf
+
+
+f.Data.DataTable.SetValueFormat("DTLines",-1,"DealerPrice","DealerPrice","####.00")
+f.Data.DataTable.SetValueFormat("DTLines",-1,"CustomerPrice","CustomerPrice","####.00")
+
+'gui.frmContract.GsGridContract.SetColumnProperty("GridView","CustomerPrice","DisplayCustomNumeric","##,###,##0.00")
+
+gui.frmContract.GsGridContract.MainView("GridView")
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.LoadGrid.End
+
+Program.Sub.cmdMPrint_Click.Start
+	Gui.frmPrint..Visible(true)
+Program.Sub.cmdMPrint_Click.End
+
+Program.Sub.cmdMSave_Click.Start
+f.Intrinsic.Control.Try
+
+v.Local.sSql.Declare
+v.Local.sRet.Declare
+v.Local.sRet1.Declare
+v.Local.fval.Declare
+
+	f.Intrinsic.Control.If(v.Screen.frmContract!txtRevision.Text,=,"")
+	f.Intrinsic.Control.AndIf(v.Screen.frmContract!txtRevision.Visible,=,true)
+		f.Intrinsic.UI.Msgbox("Revision Notes not valid")
+		gui.frmContract.txtRevision.SetFocus
+		f.Intrinsic.Control.ExitSub
+'	f.Intrinsic.Control.elseIf(v.Screen.frmContract!txtPL.Text,=,"")
+'		f.Intrinsic.UI.Msgbox("Please select ProductLine")
+'		gui.frmContract.txtPL.SetFocus
+'		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.elseIf(v.Screen.frmContract!txtdealerSO.Text,=,"")
+	f.Intrinsic.Control.AndIf(v.Global.bContract)
+		f.Intrinsic.UI.Msgbox("Please select CustomerPO")
+		gui.frmContract.txtPL.SetFocus
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.String.Build("select * from GCG_5963_Contract where Order_NO = '{0}' and CMPY_Code = '{1}'",v.Screen.frmContract!txtOrdno.text,v.Global.sPCompyCode,v.Local.Ssql)
+	
+	F.ODBC.Connection!conx.OpenLocalRecordsetRW("rst",V.Local.Ssql)
+	F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)
+		F.ODBC.conx!rst.AddNew
+		F.ODBC.conx!rst.Set!Order_no(v.Screen.frmContract!txtOrdno.text)
+		f.Intrinsic.String.Build("{0}{1}",v.Screen.frmContract!txtPL.text,v.Screen.frmContract!txtOrdno.text,v.Local.sRet)
+		F.ODBC.conx!rst.Set!OR_contract(v.Local.sRet)
+		f.Intrinsic.String.Build("{0}{1}",v.Global.sDCompyCode,v.Screen.frmContract!txtOrdno.text,v.Local.sRet)
+		F.ODBC.conx!rst.Set!Dealer_Contract(v.Local.sRet)
+		F.ODBC.conx!rst.Set!CMPY_Code(v.Global.sPCompyCode)
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.conx!rst.Set!Contract_Type(v.Screen.frmContract!ddlType.Text)
+	F.ODBC.conx!rst.Set!Foreign_Domestic(v.Screen.frmContract!ddlFD.Text)
+	F.ODBC.conx!rst.Set!Product_Line(v.Screen.frmContract!txtPL.Text)
+	F.ODBC.conx!rst.Set!Dealer_Name(v.Screen.frmContract!txtdealer.text)
+	 
+	F.ODBC.conx!rst.Set!Location(v.Screen.frmContract!txtloc.Text)
+	
+	f.Intrinsic.Control.If(v.Screen.frmContract!txtdealerSO.Text,=,"")
+		F.ODBC.conx!rst.Set!Dealer_SO(v.Screen.frmContract!txtOrdno.text)
+	f.Intrinsic.Control.Else
+		F.ODBC.conx!rst.Set!Dealer_SO(v.Screen.frmContract!txtdealerSO.Text)
+	f.Intrinsic.Control.EndIf
+	
+	F.ODBC.conx!rst.Set!Dealer_PO(v.Screen.frmContract!txtdealerPO.Text)
+	F.ODBC.conx!rst.Set!Organization_Customer(v.Screen.frmContract!txtCustomer.Text)
+	F.ODBC.conx!rst.Set!CustomerAddl(v.Screen.frmContract!txtCustomerAddl.Text)
+	
+	F.ODBC.conx!rst.Set!Ranch_Orchad(v.Screen.frmContract!txtRanch.Text)
+	F.ODBC.conx!rst.Set!Lname(v.Screen.frmContract!txtLname.Text)
+	F.ODBC.conx!rst.Set!Fname(v.Screen.frmContract!txtfname.Text)
+	F.ODBC.conx!rst.Set!Signator(v.Screen.frmContract!txtsignator.Text)
+	
+	F.ODBC.conx!rst.Set!Address(v.Screen.frmContract!txtAdd1.Text)
+	F.ODBC.conx!rst.Set!City(v.Screen.frmContract!txtCity.Text)
+	F.ODBC.conx!rst.Set!State(v.Screen.frmContract!txtState.Text)
+	F.ODBC.conx!rst.Set!Zipcode(v.Screen.frmContract!txtzip.Text)
+	
+	F.ODBC.conx!rst.Set!County(v.Screen.frmContract!txtcounty.Text)
+	F.ODBC.conx!rst.Set!Telephone(v.Screen.frmContract!txtTel.Text)
+	F.ODBC.conx!rst.Set!Email(v.Screen.frmContract!txtEmail.Text)
+	F.ODBC.conx!rst.Set!Financial_Inst(v.Screen.frmContract!txtFinance.Text)
+	F.ODBC.conx!rst.Set!Cash(v.Screen.frmContract!ddlcash.Text)
+	
+	F.ODBC.conx!rst.Set!Comments(v.Screen.frmContract!txtmultcomments.Text)
+	F.ODBC.conx!rst.Set!Ship_Approval(v.Screen.frmContract!ddlshipapproval.Text)
+	F.ODBC.conx!rst.Set!ShipApproval_Date(v.Screen.frmContract!dtpshipApproval.value)
+	F.ODBC.conx!rst.Set!Base_Approval(v.Screen.frmContract!ddlbaseapproval.Text)
+	
+	F.ODBC.conx!rst.Set!Install_Approval(v.Screen.frmContract!ddlinstallapproval.Text)
+	F.ODBC.conx!rst.Set!InstallApproval_Date(v.Screen.frmContract!dtpInstallApproval.value)
+'	F.ODBC.conx!rst.Set!As_Is(v.Screen.frmContract!ddlasis.Text)
+'	F.ODBC.conx!rst.Set!Warranty(v.Screen.frmContract!ddlwarranty.Text)
+	
+	F.ODBC.conx!rst.Set!Extended_Warranty(v.Screen.frmContract!ddlextwarranty.Text)
+'	F.ODBC.conx!rst.Set!NRCS_Eqip(v.Screen.frmContract!ddlnrcs.Text)
+	F.ODBC.conx!rst.Set!Payment_Terms(v.Screen.frmContract!txtpaymentterms.Text)
+	F.ODBC.conx!rst.Set!Miscellenous_Terms(v.Screen.frmContract!txtmiscterms.Text)
+	
+	F.ODBC.conx!rst.Set!Anti_DelDt(v.Screen.frmContract!txtAdeliverydate.value)
+	F.ODBC.conx!rst.Set!D_Payment_Terms(v.Screen.frmContract!txtdPaymentTerms.Text)
+	F.ODBC.conx!rst.Set!D_Miscellenous_Terms(v.Screen.frmContract!txtdmiscterms.Text)
+	F.ODBC.conx!rst.Set!D_Anti_DelDtNEW(v.Screen.frmContract!dtpDAdeliverydate.text)
+	
+	F.ODBC.conx!rst.Set!Email_To(v.Screen.frmContract!txEmailTo.Text)
+	F.ODBC.conx!rst.Set!Mail_Dt(v.Screen.frmContract!dtpMaildt.value)
+	F.ODBC.conx!rst.Set!D_Scheduled_Dt(v.Screen.frmContract!dtpDSchShipDt.value)
+	F.ODBC.conx!rst.Set!Price_Good(v.Screen.frmContract!dtpPricegood.value)
+	
+	F.ODBC.conx!rst.Set!Crop(v.Screen.frmContract!txtcrop.text)
+	F.ODBC.conx!rst.Set!Dept(v.Screen.frmContract!txtdept.Text)
+	F.ODBC.conx!rst.Set!Sold_BY(v.Screen.frmContract!txtsold.Text)
+	F.ODBC.conx!rst.Set!UCC_Property(v.Screen.frmContract!txtUCCproperty.Text)
+	F.ODBC.conx!rst.Set!contract_dt(v.Screen.frmContract!dtpcontractdt.value)
+	
+	v.Local.fval.Set(v.Screen.frmContract!txtSalesTax.text)
+	F.ODBC.conx!rst.Set!SalesTax(v.Local.fval)
+	F.ODBC.conx!rst.Set!Revised_Text(v.Screen.frmContract!txtRevisionPrint.Text)
+
+'	f.Intrinsic.Control.If(v.Global.bParent)
+'		'Dealer Address
+		F.ODBC.conx!rst.Set!address_d(Variable.Passed.000009.trim)
+		f.Intrinsic.Control.If(Variable.Passed.000054.trim,=,"Y")
+			F.ODBC.conx!rst.Set!City_d(Variable.Passed.000011.trim)  'ADD2
+			F.ODBC.conx!rst.Set!country_d(Variable.Passed.000052.trim) 'ADD3 Country 
+		f.Intrinsic.Control.else
+			F.ODBC.conx!rst.Set!City_d(Variable.Passed.000013.trim)
+			F.ODBC.conx!rst.Set!State_d(Variable.Passed.000014.trim)
+			F.ODBC.conx!rst.Set!zip_d(Variable.Passed.000015.trim)
+			F.ODBC.conx!rst.Set!country_d(Variable.Passed.000019.trim)
+		f.Intrinsic.Control.EndIf
+		F.ODBC.conx!rst.Set!Telephone_D(Variable.Passed.000051.trim)
+'	f.Intrinsic.Control.elseIf(v.Global.bContract,=,false)
+
+'		'area
+'		F.Global.General.ReadOption("401941",1,"","0010",v.Local.sRet1)
+'	
+'		v.Local.sRet.Set(v.Local.sRet1.Trim)
+'		'PH
+'		F.Global.General.ReadOption("401941",1,"","0011",v.Local.sRet1)
+'		f.Intrinsic.String.Build("{0}-{1}",v.Local.sRet,v.Local.sRet1.trim,v.Local.sRet)
+'		'PH
+'		F.Global.General.ReadOption("401941",1,"","0012",v.Local.sRet1)
+'		f.Intrinsic.String.Build("{0}-{1}",v.Local.sRet,v.Local.sRet1.trim,v.Local.sRet)
+''		gui.frmTestReport.lblcmpyPH.Caption(v.Local.sRet.Trim)
+'		F.ODBC.conx!rst.Set!Telephone_D(v.Local.sRet.Trim)
+''		'email
+''		F.Global.General.ReadOption("401943",1,"","0000",v.Local.sRet)
+''		gui.frmTestReport.lblcmpyemail.Caption(v.Local.sRet.Trim)
+
+'		'Get Company Address
+'		F.Global.General.ReadOption("401939",1,"","0000",v.Local.sRet1)
+'		F.ODBC.conx!rst.Set!address_d(v.Local.sRet1.Trim)
+'	
+''		'Get add2
+''		F.Global.General.ReadOption("401940",1,"","0000",v.Local.sRet1)
+''		f.Intrinsic.String.Build("{0}, {1}",v.Local.sRet,v.Local.sRet1.trim,v.Local.sRet)
+'	
+'		'City
+'		F.Global.General.ReadOption("401941",1,"","0003",v.Local.sRet1)
+''		f.Intrinsic.String.Build("{0}, {1}",v.Local.sRet,v.Local.sRet1.trim,v.Local.sRet)
+'		F.ODBC.conx!rst.Set!City_d(v.Local.sRet1.Trim)
+'	
+'		'State
+'		F.Global.General.ReadOption("401941",1,"","0004",v.Local.sRet1)
+''		f.Intrinsic.String.Build("{0}, {1}",v.Local.sRet,v.Local.sRet1.trim,v.Local.sRet)
+'		F.ODBC.conx!rst.Set!State_d(v.Local.sRet1.Trim)
+'	
+'		'Zip
+'		F.Global.General.ReadOption("401941",1,"","0005",v.Local.sRet1)
+''		f.Intrinsic.String.Build("{0} {1}",v.Local.sRet,v.Local.sRet1.trim,v.Local.sRet)
+'		F.ODBC.conx!rst.Set!zip_d(v.Local.sRet1)
+'	
+'	f.Intrinsic.Control.endif
+	
+	F.ODBC.conx!rst.Update
+	F.ODBC.conx!rst.Close
+	
+	f.Intrinsic.Control.If(v.Screen.frmContract!txtRevision.Visible,=,True)
+		F.Intrinsic.String.Replace(v.Screen.frmContract!txtRevision.text,"'","''",v.Local.sRet)
+		f.Intrinsic.String.Build("Insert Into GCG_5963_RevHist(Order_no,Cmpy_code,Usercode,Notes) values('{0}','{1}','{2}','{3}')",v.Screen.frmContract!txtOrdno.text,v.Global.sPCompyCode,v.Caller.User,v.Local.sRet,v.Local.sSQL)
+		f.ODBC.Connection!conx.execute(v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.UI.Msgbox("Contract saved successfully")
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry		
+Program.Sub.cmdMSave_Click.End
+
+
+Program.Sub.cmdMEmail_Click.Start
+f.Intrinsic.Control.Try
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdMEmail_Click.End
+
+Program.Sub.frmPrint_UnLoad.Start
+f.Intrinsic.Control.Try
+	Gui.frmPrint..Visible(false)
+	
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.frmPrint_UnLoad.End
+
+Program.Sub.cmdRevHist_Click.Start
+f.Intrinsic.Control.Try
+	Gui.frmRevision..Visible(true)
+	gui.frmRevision..WaitForDismiss
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdRevHist_Click.End
+
+Program.Sub.cmdBrowDealer_Click.Start
+f.Intrinsic.Control.Try
+	V.Local.sRet.Declare
+
+'	f.Global.General.overridecompany(v.Global.sCompyCode)
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser(205,"",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		gui.frmContract.txtdealer.Text(V.Local.sRet(0))
+	f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdBrowDealer_Click.End
+
+Program.Sub.cmdBrowCust_Click.Start
+f.Intrinsic.Control.Try
+V.Local.sRet.Declare
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	Function.Intrinsic.UI.SetBrowserOOT(True)
+	F.Intrinsic.UI.Browser(205,"",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		gui.frmContract.txtCustomer.Text(V.Local.sRet(0))
+	f.Intrinsic.Control.EndIf
+		
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdBrowCust_Click.End
+
+Program.Sub.cmdBrowsalesperson_Click.Start
+f.Intrinsic.Control.Try
+v.Local.ssql.Declare
+V.Local.sTitles.Declare
+V.Local.iWidths.Declare
+V.Local.sRet.Declare
+
+
+'F.ODBC.Connection!conx.OpenCompanyConnection(300)
+f.Intrinsic.Control.If(v.Global.bParent)
+	f.Intrinsic.String.Build("select SalesPerson,SALESPERSON_CODE from GLOBAL{0}.SALESPEOPLE where KEY1 = 'AR ' AND KEY2 = 'SLM' AND SALESPERSON_CODE <> ''",v.Global.sDCompyCode,v.Local.ssql)
+f.Intrinsic.Control.Else
+	v.Local.ssql.Set("select SalesPerson,SALESPERSON_CODE from SALESPEOPLE where KEY1 = 'AR ' AND KEY2 = 'SLM' AND SALESPERSON_CODE <> ''")
+f.Intrinsic.Control.endif
+
+F.Intrinsic.String.Split("SalesPerson*!*Code","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1800*!*1800","*!*",V.Local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+Function.Intrinsic.UI.SetBrowserOOT(True)
+
+F.Intrinsic.UI.Browser("Select a Contact","conx",V.Local.ssql,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	gui.frmContract.txtsold.Text(V.Local.sRet(0).trim)
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdBrowsalesperson_Click.End
+
+Program.Sub.frmRevision_UnLoad.Start
+	Gui.frmRevision..Visible(false)
+Program.Sub.frmRevision_UnLoad.End
+
+Program.Sub.LoadRevision.Start
+f.Intrinsic.Control.Try
+
+v.Local.Ssql.Declare
+V.Local.sOrderno.Declare
+
+
+gui.frmContract.txtRevision.Visible(true)
+gui.frmContract.lblREV.Visible(true)
+gui.frmContract.cmdRevHist.Visible(true)
+			
+f.Intrinsic.String.Build("select * from GCG_5963_RevHist where Order_NO = '{0}' and CMPY_Code = '{1}' order by Rev_Date desc ",v.Screen.frmContract!txtOrdno.text,v.Global.sPCompyCode,v.Local.Ssql)
+f.Data.Datatable.CreateFromSQL("DTRevision","conx",v.Local.Ssql,true)
+
+gui.frmRevision.GsGridRevision.AddGridviewFromDatatable("GridREV","DTRevision")
+
+gui.frmRevision.GsGridRevision.SetColumnProperty("GridREV","Rev_Date","HeaderFontBold","True")
+gui.frmRevision.GsGridRevision.SetColumnProperty("GridREV","Rev_Date","HeaderBackColor","LIGHTBLUE")
+gui.frmRevision.GsGridRevision.SetColumnProperty("GridREV","Usercode","HeaderFontBold","True")
+gui.frmRevision.GsGridRevision.SetColumnProperty("GridREV","Usercode","HeaderBackColor","LIGHTBLUE")
+gui.frmRevision.GsGridRevision.SetColumnProperty("GridREV","Notes","HeaderFontBold","True")
+gui.frmRevision.GsGridRevision.SetColumnProperty("GridREV","Notes","HeaderBackColor","LIGHTBLUE")
+
+gui.frmRevision.GsGridRevision.SetGridViewProperty("GridREV","Editable",False)
+gui.frmRevision.GsGridRevision.SetGridViewProperty("GridREV","readonly",True)
+
+
+gui.frmRevision.GsGridRevision.SetColumnProperty("GridREV","Rev_Date","MaxWidth",150)
+gui.frmRevision.GsGridRevision.SetColumnProperty("GridREV","Usercode","MaxWidth",80)
+
+gui.frmRevision.GsGridRevision.SetColumnProperty("GridREV","Order_NO","visible","False")
+gui.frmRevision.GsGridRevision.SetColumnProperty("GridREV","CMPY_Code","visible","False")
+
+gui.frmRevision.GsGridRevision.SetGridViewProperty("GridREV", "Enableappearanceevenrow", "True")
+gui.frmRevision.GsGridRevision.MainView("GridREV")
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.LoadRevision.End
+
+Program.Sub.LoadPrint.Start
+f.Intrinsic.Control.Try
+
+f.Data.Datatable.Create("DTPrint","true")
+F.Data.DataTable.AddColumn("DTPrint","Document","String")
+F.Data.DataTable.AddColumn("DTPrint","Select","Bit")
+F.Data.DataTable.AddColumn("DTPrint","Value","String")
+
+F.Data.DataTable.AddRow("DTPrint","Document","ORT to Dealer/Customer Contract","Select",1,"Value","O")
+'f.Intrinsic.Control.If(v.Global.bNew,=,False)
+f.Intrinsic.Control.If(v.Global.bContract,=,True)
+	F.Data.DataTable.AddRow("DTPrint","Document","Dealer to Customer Contract","Select",1,"Value","D")
+f.Intrinsic.Control.EndIf
+F.Data.DataTable.AddRow("DTPrint","Document","All documents","Select",1,"Value","A")
+F.Data.DataTable.AddRow("DTPrint","Document","UCC Documents","Select",0,"Value","U")
+
+gui.frmPrint.GsGridPrint.AddGridviewFromDatatable("GridPrint","DTPrint")
+
+gui.frmPrint.GsGridPrint.SetColumnProperty("GridPrint","Document","HeaderFontBold","True")
+gui.frmPrint.GsGridPrint.SetColumnProperty("GridPrint","Document","HeaderBackColor","LIGHTBLUE")
+gui.frmPrint.GsGridPrint.SetColumnProperty("GridPrint","Select","HeaderFontBold","True")
+gui.frmPrint.GsGridPrint.SetColumnProperty("GridPrint","Select","HeaderBackColor","LIGHTBLUE")
+
+gui.frmPrint.GsGridPrint.SetColumnProperty("GridPrint","Document","AllowEdit",False)
+gui.frmPrint.GsGridPrint.SetColumnProperty("GridPrint","Document","ReadOnly",True)
+
+gui.frmPrint.GsGridPrint.SetColumnProperty("GridPrint","Select","MaxWidth",30)
+gui.frmPrint.GsGridPrint.SetColumnProperty("GridPrint","Select","ShowCaption",False)
+
+gui.frmPrint.GsGridPrint.SetColumnProperty("GridPrint","Select","AllowEdit",True)
+gui.frmPrint.GsGridPrint.SetColumnProperty("GridPrint","Select","ReadOnly",False)
+gui.frmPrint.GsGridPrint.SetColumnProperty("GridPrint","Value","Visible",False)
+
+gui.frmPrint.GsGridPrint.MainView("GridPrint")
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.LoadPrint.End
+
+Program.Sub.cmdBrowDSO_Click.Start
+f.Intrinsic.Control.Try
+v.Local.ssql.Declare
+V.Local.sTitles.Declare
+V.Local.iWidths.Declare
+V.Local.sRet.Declare
+V.Local.sCurrCmpycode.Declare
+V.Local.sCurrOrdno.Declare
+V.Local.sRemOrdno.Declare
+V.Local.sRemCmpycode.Declare
+v.Local.i.Declare
+V.Local.sRet1.Declare
+V.Local.lQty.Declare
+
+'F.ODBC.Connection!conx.OpenCompanyConnection(300)
+
+'f.Global.General.overridecompany(v.Global.sCompyCode)
+
+'v.Local.ssql.Set("select Customer_PO,Order_no,customer,Date_Order from v_Order_header")
+'F.Intrinsic.String.Split("Customer PO*!*Order No*!*Customer*!*Date Order","*!*",V.Local.sTitles)	
+'F.Intrinsic.String.Split("1800*!*1800*!*1800*!*1800","*!*",V.Local.iWidths)
+'F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+'F.Intrinsic.UI.Browser("Selec dealer PO","conx",V.Local.ssql,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+'F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+'	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+'	gui.frmContract.txtdealerSO.Text(V.Local.sRet(0))
+'F.Intrinsic.Control.EndIf
+
+'f.Intrinsic.String.Build("select Name_Customer_ship,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Country_Ship from v_ORDER_SHIP_TO  where order_no = '{0}'",v.Screen.frmContract!txtOrdno.Text,v.Local.ssql)
+'f.Intrinsic.String.Build("select order_no,Name_Customer_ship,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Country_Ship from dbo.{0}.v_ORDER_SHIP_TO",v.Global.sCompyCode,v.Local.ssql)
+
+'select SHP.order_no,Name_Customer_ship,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Country_Ship,SALESPEOPLE.SalesPerson,Terms
+'from GLOBALTS2.ORDER_SHIP_TO SHP left join GLOBALTS2.SALESPEOPLE on SHP.SalesPerson_Ship = SALESPERSON_CODE and  KEY1 = 'AR ' 
+'AND KEY2 = 'SLM' AND SALESPERSON_CODE <> ''  
+'join GLOBALTS2.order_header Hdr on SHP.order_no = Hdr.order_no and SHP.Record_type = HDR.Record_type where  SHP.Record_type = 'C' 
+
+
+'f.Intrinsic.Control.If(v.Global.bParent)
+''	f.Intrinsic.String.Build("select order_no,Name_Customer_ship,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Country_Ship from GLOBAL{0}.ORDER_SHIP_TO where Record_type = 'C'",v.Global.sDCompyCode,v.Local.ssql)
+''	f.Intrinsic.String.Build("select order_no,Name_Customer_ship,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Country_Ship,SalesPerson from GLOBAL{0}.ORDER_SHIP_TO left join GLOBAL{0}.SALESPEOPLE on SalesPerson_Ship = SALESPERSON_CODE and  KEY1 = 'AR ' AND KEY2 = 'SLM' AND SALESPERSON_CODE <> '' where Record_type = 'C'",v.Global.sDCompyCode,v.Local.ssql)
+''	f.Intrinsic.String.Build("select  SHP.order_no,Name_Customer_ship,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Country_Ship,SALESPEOPLE.SalesPerson from GLOBAL{0}.ORDER_SHIP_TO SHP left join GLOBAL{0}.SALESPEOPLE on SHP.SalesPerson_Ship = SALESPERSON_CODE and  KEY1 = 'AR ' AND KEY2 = 'SLM' AND SALESPERSON_CODE <> '' where SHP.Record_type = 'C'",v.Global.sDCompyCode,v.Local.ssql)
+'	f.Intrinsic.String.Build("  select  order_no,Name_Customer,Address_1,City,State,Zip_Code,Country,Contact_Phone,Contact_Email from GLOBAL{0}.ORDER_BILL_TO  where Record_type = 'B'",v.Global.sDCompyCode,v.Local.ssql)
+'f.Intrinsic.Control.Else
+''	f.Intrinsic.String.Build("select order_no,Name_Customer_ship,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Country_Ship from GLOBAL{0}.ORDER_SHIP_TO where Record_type = 'C'",v.Caller.CompanyCode.Trim,v.Local.ssql)
+''	f.Intrinsic.String.Build("select SHP.order_no,Name_Customer_ship,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Country_Ship,SALESPEOPLE.SalesPerson from ORDER_SHIP_TO SHP left join SALESPEOPLE on SHP.SalesPerson_Ship = SALESPERSON_CODE and  KEY1 = 'AR ' AND KEY2 = 'SLM' AND SALESPERSON_CODE <> '' where SHP.Record_type = 'C'"," ",v.Local.ssql)
+'	f.Intrinsic.String.Build("  select  order_no,Name_Customer,Address_1,City,State,Zip_Code,Country,Contact_Phone,Contact_Email from ORDER_BILL_TO  where Record_type = 'B'"," ",v.Local.ssql)
+'f.Intrinsic.Control.endif
+
+
+f.Intrinsic.Control.If(v.Global.bParent)
+	f.Intrinsic.String.Build("  select  HDR.order_no,Name_Customer,Address_1,City,State,Zip_Code,Country,Contact_Phone,Contact_Email,Customer_PO,SALESPEOPLE.SalesPerson,Address_2,Address_3,flag_Intl,Address_4 from GLOBAL{0}.order_header HDR join GLOBAL{0}.order_bill_to Bill on HDR.order_no = BILL.order_no and Hdr.Record_type = 'A' and Bill.Record_type = 'B' left join GLOBAL{0}.SALESPEOPLE on HDr.SalesPerson = SALESPERSON_CODE and  KEY1 = 'AR ' AND KEY2 = 'SLM' AND SALESPERSON_CODE <> ''",v.Global.sDCompyCode,v.Local.ssql)
+f.Intrinsic.Control.Else
+	f.Intrinsic.String.Build("  select  HDR.order_no,Name_Customer,Address_1,City,State,Zip_Code,Country,Contact_Phone,Contact_Email,Customer_PO,SALESPEOPLE.SalesPerson,Address_2,Address_3,flag_Intl,Address_4 from order_header HDR join order_bill_to Bill on HDR.order_no = BILL.order_no and Hdr.Record_type = 'A' and Bill.Record_type = 'B' left join SALESPEOPLE on HDr.SalesPerson = SALESPERSON_CODE and  KEY1 = 'AR ' AND KEY2 = 'SLM' AND SALESPERSON_CODE <> ''",v.Global.sDCompyCode,v.Local.ssql)
+f.Intrinsic.Control.endif
+
+
+'F.Intrinsic.String.Split("Order No*!*Name Customer*!*Address*!*City*!*State*!*CodeZip*!*Country*!*SalesPerson","*!*",V.Local.sTitles)	
+F.Intrinsic.String.Split("Order No*!*Name Customer*!*Address*!*City*!*State*!*CodeZip*!*Country*!*Phone*!*Email*!*CustPO*!*Sales Person*!*Address_2*!*Address_3*!*flag_Intl*!*Address_4","*!*",V.Local.sTitles)	
+'F.Intrinsic.String.Split("1500*!*2200*!*2000*!*1800*!*1800*!*1800*!*1800*!*1800","*!*",V.Local.iWidths)
+F.Intrinsic.String.Split("1500*!*2200*!*2000*!*1800*!*1800*!*1800*!*1800*!*1800*!*1800*!*1800*!*1800*!*1800*!*1800*!*1800*!*1800","*!*",V.Local.iWidths)
+
+'v.Local.ihwd.Declare
+
+'Function.Intrinsic.UI.SetBrowserParentHwnd(Variable.Caller.Handle) 
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+Function.Intrinsic.UI.SetBrowserOOT(True)
+
+'v.Local.ihwd.Set(Variable.Screen.frmContract.Hwnd)
+'Function.Intrinsic.UI.SetBrowserParentHwnd(v.Local.ihwd) 
+
+
+
+F.Intrinsic.UI.Browser("Select Dealer Order","conx",V.Local.ssql,V.Local.sTitles,V.Local.iWidths,17000,10000,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+
+	v.Global.fCredit.set(0)
+	v.Global.fDEPOSIT.Set(0)
+	v.Global.fDISCOUNT.Set(0)
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	gui.frmContract.txtdealerSO.Text(V.Local.sRet(0))
+	
+	gui.frmContract.txtCustomer.Text(V.Local.sRet(1).trim)  'Name Customer 
+	gui.frmContract.txtAdd1.Text(V.Local.sRet(2).trim)  'Address 
+
+	
+	f.Intrinsic.Control.If(V.Local.sRet(13).trim,=,"Y")
+		'flag_Intl
+'		f.Intrinsic.String.Split(V.Local.sRet(11).trim," ",V.Local.sRet1)
+'		f.Intrinsic.Control.If(V.Local.sRet1.UBound,=,2)
+'			gui.frmContract.txtCity.Text(V.Local.sRet1(0).trim)  'City 
+'			gui.frmContract.txtState.Text(V.Local.sRet1(1).trim)  'State 
+'			gui.frmContract.txtzip.Text(V.Local.sRet1(2).trim)  'CodeZip 
+'		f.Intrinsic.Control.elseIf(V.Local.sRet1.UBound,=,1)
+'			gui.frmContract.txtCity.Text(V.Local.sRet1(0).trim)  'City 
+'			gui.frmContract.txtState.Text(V.Local.sRet1(1).trim)  'State 
+'		f.Intrinsic.Control.elseIf(V.Local.sRet1.UBound,=,0)
+'			gui.frmContract.txtCity.Text(V.Local.sRet1(0).trim)  'City 
+'		f.Intrinsic.Control.EndIf
+		gui.frmContract.ddlFD.Text("I")
+		gui.frmContract.txtCity.Text(V.Local.sRet(11).trim)  'ADD2
+		gui.frmContract.txtState.Text(V.Local.sRet(12).trim)  'ADD3 
+		gui.frmContract.txtzip.Text(V.Local.sRet(14).trim)  'ADD4 
+		'gui.frmContract.txtcounty.Text(V.Local.sRet(12).trim) 'ADD3 Country 
+	f.Intrinsic.Control.else
+		gui.frmContract.ddlFD.Text("D")
+		gui.frmContract.txtCity.Text(V.Local.sRet(3).trim)  'City 
+		gui.frmContract.txtState.Text(V.Local.sRet(4).trim)  'State 
+		gui.frmContract.txtzip.Text(V.Local.sRet(5).trim)  'CodeZip 
+		'gui.frmContract.txtcounty.Text(V.Local.sRet(6).trim)  'Country 
+	f.Intrinsic.Control.endif
+	
+	gui.frmContract.txtTel.Text(V.Local.sRet(7).trim)  
+	gui.frmContract.txtEmail.Text(V.Local.sRet(8).trim)  
+	
+	gui.frmContract.txtdealerPO.Text(V.Local.sRet(9).trim) 'CUSTPO
+	gui.frmContract.txtsold.Text(V.Local.sRet(10).trim) 'salesPerson
+	
+'	f.Intrinsic.Control.If(v.Global.bParent)
+'		V.Local.sCurrCmpycode.Set(v.Global.sPCompyCode)
+'		V.Local.sCurrOrdno.Set(v.Screen.frmContract!txtOrdno.text)
+'		V.Local.sRemOrdno.Set(v.Screen.frmContract!txtdealerSO.text)
+'		V.Local.sRemCmpycode.Set(v.Global.sDCompyCode)
+'	f.Intrinsic.Control.Else
+'		V.Local.sCurrCmpycode.Set(v.Caller.CompanyCode.Trim)
+'		V.Local.sCurrOrdno.Set(v.Screen.frmContract!txtdealerSO.text)
+'		V.Local.sRemOrdno.Set(v.Screen.frmContract!txtOrdno.Text)
+'		V.Local.sRemCmpycode.Set(v.Global.sPCompyCode)
+'	f.Intrinsic.Control.EndIf
+	
+	V.Local.sCurrCmpycode.Set(v.Global.sPCompyCode)
+	V.Local.sCurrOrdno.Set(v.Screen.frmContract!txtOrdno.text)
+	V.Local.sRemOrdno.Set(v.Screen.frmContract!txtdealerSO.text)
+	V.Local.sRemCmpycode.Set(v.Global.sDCompyCode)
+	
+'	
+'	f.Intrinsic.Control.if(v.DataTable.DTLines.RowCount,=,0)
+'		F.Data.DataTable.AddRow("DTLines","Quantity",0,"Part","","Description","","Customer Price",,"Cost",0)
+'	f.Intrinsic.Control.EndIf
+
+'	
+'	f.Intrinsic.String.Build("select convert(Qty_Ordered,SQL_float) as Quantity,Part,Description,convert(Extension,SQL_CHAR) as 'Customer Price',convert(Cost,SQL_CHAR) as 'Dealer Price' from GLOBAL{0}.order_lines where Record_Type = 'L' and order_no = '{1}' ",V.Local.sCurrCmpycode,v.Screen.frmContract!txtdealerSO.text,v.Local.ssql)
+	f.Intrinsic.String.Build("select Record_No,convert(Qty_Ordered,SQL_float) as Quantity,Part,Description,convert(Price,SQL_CHAR) as 'CustomerPrice',convert(Cost,SQL_CHAR) as 'DealerPrice' from GLOBAL{0}.order_lines where Record_Type = 'L' and order_no = '{1}' and Flag_BOM <> 'C' order by record_no",V.Local.sRemCmpycode,V.Local.sRemOrdno,v.Local.ssql)
+
+	f.Data.Datatable.CreateFromSQL("DTTemp","conx",v.Local.Ssql,True)
+
+	f.Intrinsic.String.Build("select Part,convert(Price,SQL_CHAR) as 'Price' from GLOBAL{0}.order_lines where order_no = '{1}' and Record_Type = 'L' and Flag_BOM <> 'C'",V.Local.sCurrCmpycode,V.Local.sCurrOrdno,v.Local.ssql)
+	F.Data.Dictionary.CreateFromSQL("dict", "conx",V.Local.sSQL)
+	F.Data.Dictionary.SetDefaultReturn("dict", "0.00")
+	F.Data.DataTable.FillFromDictionary("DTTemp", "dict", "Part", "DealerPrice") 
+	F.Data.Dictionary.Close("dict")
+	
+	f.Data.DataTable.SetValueFormat("DTTemp",-1,"DealerPrice","DealerPrice","####.00")
+	f.Data.DataTable.SetValueFormat("DTTemp",-1,"CustomerPrice","CustomerPrice","####.00")
+	
+	f.Data.Datatable.DeleteRow("DTLines")
+	f.Data.Datatable.AcceptChanges("DTLines")
+	f.Data.Datatable.Merge("DTTemp","DTLines",False,2)
+	
+	f.Data.Datatable.Close("DTTemp")
+	
+
+	v.Local.sFilter.Declare
+	
+'	f.Intrinsic.String.Build(CREDIT','DEPOSIT','TRADE-IN','DISCOUNT')","",v.Local.sFilter)
+'f.Intrinsic.String.Build(CREDIT','PROGRESS','TRADE-IN','DISCOUNT','BASE CREDIT')","",v.Local.sFilter)
+f.Intrinsic.String.Build("Part IN('TRADE-IN CREDIT','PROGRESS','TRADE-IN','DISCOUNT','BASE CREDIT')","",v.Local.sFilter)
+	F.Intrinsic.Control.If(V.DataView.DTLines!DVLines.Exists)
+		F.Data.DataView.Close("DTLines","DVLines")
+	F.Intrinsic.Control.EndIf
+	f.Data.DataView.Create("DTLines","DVLines")
+	f.Data.DataView.SetFilter("DTLines","DVLines",v.Local.sFilter)
+	f.Intrinsic.Control.If(v.DataView.DTLines!DVLines.RowCount,>,0)
+'		f.Data.DataView.SetValue("DTLines","DVLines",-1,"Description","")
+''		f.Data.DataView.SetValue("DTLines","DVLines",-1,"Quantity",v.Ambient.DBNULL)
+'		f.Data.DataView.SetValue("DTLines","DVLines",-1,"DealerPrice",v.Ambient.DBNULL)
+		
+		f.Intrinsic.Control.For(v.Local.i,0,v.DataView.DTLines!DVLines.RowCount--,1)
+			
+			
+			f.Intrinsic.Control.if(v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"TRADE-IN CREDIT","or",v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"TRADE-IN",v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"BASE CREDIT")
+'				f.Intrinsic.Math.Abs(v.DataView.DTLines!DVLines(v.Local.i).Quantity!Fieldval,V.Local.lQty)
+				V.Local.lQty.Set(v.DataView.DTLines!DVLines(v.Local.i).Quantity!Fieldval)
+				v.Global.fCredit.set(v.DataView.DTLines!DVLines(v.Local.i).CustomerPrice!Fieldval)
+				f.Intrinsic.Math.Mult(v.Global.fCredit,V.Local.lQty,v.Global.fCredit)
+				v.Global.sTRADE-DESC.Set(v.DataView.DTLines!DVLines(v.Local.i).Description!Fieldval)
+				
+				v.Global.fCreditDealer.set(v.DataView.DTLines!DVLines(v.Local.i).DealerPrice!Fieldval)
+				f.Intrinsic.Math.Mult(v.Global.fCreditDealer,V.Local.lQty,v.Global.fCreditDealer)
+'			f.Intrinsic.Control.elseif(v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"DEPOSIT")
+			f.Intrinsic.Control.elseif(v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"PROGRESS")
+			f.Intrinsic.Control.andif(v.DataView.DTLines!DVLines(v.Local.i).Description!Fieldvaltrim,=,"DEPOSIT")
+				v.Global.fDEPOSIT.Set(v.DataView.DTLines!DVLines(v.Local.i).CustomerPrice!Fieldval)
+				V.Local.lQty.Set(v.DataView.DTLines!DVLines(v.Local.i).Quantity!Fieldval)
+				f.Intrinsic.Math.Mult(v.Global.fDEPOSIT,V.Local.lQty,v.Global.fDEPOSIT)
+			f.Intrinsic.Control.elseif(v.DataView.DTLines!DVLines(v.Local.i).Part!Fieldvaltrim,=,"DISCOUNT")
+				v.Global.fDISCOUNT.Set(v.DataView.DTLines!DVLines(v.Local.i).CustomerPrice!Fieldval)
+			f.Intrinsic.Control.endif
+		f.Intrinsic.Control.Next(v.Local.i)
+	
+	f.Intrinsic.Control.EndIf
+
+	f.Data.DataView.close("DTLines","DVLines")	
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdBrowDSO_Click.End
+
+Program.Sub.cmdRefresh_Click.Start
+f.Intrinsic.Control.Try
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.Load_Data.Start
+f.Intrinsic.Control.Try
+
+v.Local.Ssql.Declare
+
+V.Local.sRet.Declare
+V.Local.sOrderno.Declare
+
+'Script1
+'Variable.Passed.000003 OrderNo
+'Variable.Passed.000006  customerno
+'sort-2
+	'Variable.Passed.000073  
+	gui.frmContract.ddlType.AddItem("N")
+	gui.frmContract.ddlType.AddItem("U")
+	
+'	gui.frmContract.ddlasis.AddItem("Y")
+'	gui.frmContract.ddlasis.AddItem("N")
+	
+	gui.frmContract.ddlinstallapproval.AddItem("Y")
+	gui.frmContract.ddlinstallapproval.AddItem("N")
+	
+	gui.frmContract.ddlFD.AddItem("D")
+	gui.frmContract.ddlFD.AddItem("I")
+	
+	gui.frmContract.ddlextwarranty.AddItem("Y")
+	gui.frmContract.ddlextwarranty.AddItem("N")
+	
+'	gui.frmContract.ddlnrcs.AddItem("Y")
+'	gui.frmContract.ddlnrcs.AddItem("N")
+'	
+	gui.frmContract.ddlshipapproval.AddItem("Y")
+	gui.frmContract.ddlshipapproval.AddItem("N")
+	
+'	gui.frmContract.ddlwarranty.AddItem("Y")
+'	gui.frmContract.ddlwarranty.AddItem("N")
+	
+	gui.frmContract.ddlbaseapproval.AddItem("Y")
+	gui.frmContract.ddlbaseapproval.AddItem("N")
+	
+	gui.frmContract.ddlCash.AddItem("Cash")
+	gui.frmContract.ddlCash.AddItem("Loan")
+	gui.frmContract.ddlCash.AddItem("Lease")
+
+	f.Intrinsic.String.LPad(Variable.Passed.000003,"0",7,V.Local.sOrderno)
+	gui.frmContract.txtOrdno.Text(V.Local.sOrderno)
+
+
+	F.ODBC.Connection!conx.OpenCompanyConnection(300)
+	f.Intrinsic.String.Build("select C_Sort_1,InterCompany from v_customer_master MAS  Join v_CUSTOMER_SALES SAL on MAS.customer = SAL.customer   where MAS.customer = '{0}'",Variable.Passed.000006 ,v.Local.Ssql)
+	f.ODBC.Connection!Conx.ExecuteAndReturn(v.Local.Ssql,v.Local.sRet)
+
+'	
+'	v.Local.Ssql.set("select Order_no,CMPY_Code,Contract_Type,Foreign_Domestic,OR_contract,Product_Line,Dealer_Name,Dealer_Contract,Location,Dealer_SO,Organization_Customer,Ranch_Orchad")
+'	f.Intrinsic.String.Build("{0},Lname,Fname,Signator,Address,City,State,Zipcode,County,Telephone,Financial_Inst,Cash,Comments,Ship_Approval,",v.Local.Ssql,v.Local.Ssql)
+'	f.Intrinsic.String.Build("{0}Base_Approval,Install_Approval,Extended_Warranty,Payment_Terms,Miscellenous_Terms,D_Payment_Terms,D_Miscellenous_Terms,Email_To",v.Local.Ssql,v.Local.Ssql)
+'	f.Intrinsic.String.Build("{0},Crop,Dept,Sold_By,UCC_Property,CustomerAddl,Dealer_PO,Address_d,State_d,Zip_d,City_d,Country_d,SalesTax,Telephone_d,Email",v.Local.Ssql,v.Local.Ssql)
+'	f.Intrinsic.String.Build("{0},Anti_DelDt,CASE WHEN ShipApproval_Date IS NULL THEN '1/1/001    ' else ShipApproval_Date  END AS 'ShipApproval_Date' ",v.Local.Ssql,v.Local.Ssql)
+'	f.Intrinsic.String.Build("{0},CASE WHEN InstallApproval_Date IS NULL THEN '1/1/001    ' else InstallApproval_Date END AS 'InstallApproval_Date'",v.Local.Ssql,v.Local.Ssql)
+'	f.Intrinsic.String.Build("{0},CASE WHEN D_Anti_DelDt IS NULL THEN '1/1/001' else D_Anti_DelDt END AS 'D_Anti_DelDt'",v.Local.Ssql,v.Local.Ssql)
+'	f.Intrinsic.String.Build("{0},CASE WHEN D_Anti_DelDt IS NULL THEN '1/1/001' else D_Anti_DelDt END AS D_Anti_DelDt",v.Local.Ssql,v.Local.Ssql)
+'	f.Intrinsic.String.Build("{0}, CONVERT(D_Anti_DelDt, SQL_Date) as D_Anti_DelDt",v.Local.Ssql,v.Local.Ssql)
+''	f.Intrinsic.String.Build("{0},CASE WHEN Mail_Dt IS NULL THEN '1/1/001    ' else Mail_Dt END AS 'Mail_Dt'",v.Local.Ssql,v.Local.Ssql)
+'	f.Intrinsic.String.Build("{0},Mail_Dt",v.Local.Ssql,v.Local.Ssql)
+'	f.Intrinsic.String.Build("{0},CASE WHEN D_Scheduled_Dt IS NULL THEN '1/1/001    ' else D_Scheduled_Dt END AS 'D_Scheduled_Dt'",v.Local.Ssql,v.Local.Ssql)
+'	f.Intrinsic.String.Build("{0},CASE WHEN Price_Good IS NULL THEN '1/1/001    ' else Price_Good END AS 'Price_Good'",v.Local.Ssql,v.Local.Ssql)
+'	f.Intrinsic.String.Build("{0},CASE WHEN contract_dt IS NULL THEN '1/1/001    ' else contract_dt END AS 'contract_dt' from GCG_5963_Contract_TEST",v.Local.Ssql,v.Local.Ssql)
+
+
+	v.Local.Ssql.set("select Order_no,CMPY_Code,Contract_Type,Foreign_Domestic,OR_contract,Product_Line,Dealer_Name,Dealer_Contract,Location,Dealer_SO,Organization_Customer,Ranch_Orchad")
+	f.Intrinsic.String.Build("{0},Lname,Fname,Signator,Address,City,State,Zipcode,County,Telephone,Financial_Inst,Cash,Comments,Ship_Approval,",v.Local.Ssql,v.Local.Ssql)
+	f.Intrinsic.String.Build("{0}Base_Approval,Install_Approval,Extended_Warranty,Payment_Terms,Miscellenous_Terms,D_Payment_Terms,D_Miscellenous_Terms,Email_To",v.Local.Ssql,v.Local.Ssql)
+	f.Intrinsic.String.Build("{0},Crop,Dept,Sold_By,UCC_Property,CustomerAddl,Dealer_PO,Address_d,State_d,Zip_d,City_d,Country_d,SalesTax,Telephone_d,Email",v.Local.Ssql,v.Local.Ssql)
+	f.Intrinsic.String.Build("{0},Anti_DelDt,ShipApproval_Date ",v.Local.Ssql,v.Local.Ssql)
+	f.Intrinsic.String.Build("{0},InstallApproval_Date",v.Local.Ssql,v.Local.Ssql)
+	f.Intrinsic.String.Build("{0},D_Anti_DelDtNEW",v.Local.Ssql,v.Local.Ssql)
+	f.Intrinsic.String.Build("{0},Mail_Dt",v.Local.Ssql,v.Local.Ssql)
+	f.Intrinsic.String.Build("{0},D_Scheduled_Dt",v.Local.Ssql,v.Local.Ssql)
+	f.Intrinsic.String.Build("{0},Price_Good",v.Local.Ssql,v.Local.Ssql)
+	f.Intrinsic.String.Build("{0},contract_dt,Revised_Text from GCG_5963_Contract",v.Local.Ssql,v.Local.Ssql)
+	
+'	f.Intrinsic.Control.If(v.Caller.User,=,"SUPERVSR")
+'		Function.Intrinsic.Debug.InvokeDebugger
+'		Function.Intrinsic.Debug.Stop
+'	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		
+		f.Intrinsic.Control.If(V.Local.sRet(1),=,"Y")
+			'Set the global intercompany flag so we can look up the data from another company code
+			v.Global.sIntercompany.Set(v.Local.sRet(1))
+			
+			f.Intrinsic.Control.If(V.Local.sRet(0).trim,<>,"")
+				v.Global.sPCompyCode.Set(v.Caller.CompanyCode.Trim)
+				v.Global.sDCompyCode.Set(V.Local.sRet(0).trim)
+				v.Global.bContract.Set(True)
+				v.Global.bParent.Set(True)
+'				f.Intrinsic.String.LPad(Variable.Passed.000003,"0",7,v.local.sOrderno)
+'				gui.frmContract.txtOrdno.Text(v.local.sOrderno)
+
+
+'				F.Intrinsic.Control.If(Variable.Caller.Switches,=,"O")
+				'OPEN
+'					f.Intrinsic.String.Build("select * from GCG_5963_Contract where Order_NO = '{0}' and CMPY_Code = '{1}'",v.local.sOrderno,v.Global.sPCompyCode,v.Local.Ssql)
+					
+					f.Intrinsic.String.Build("{0} where Order_NO = '{1}' and CMPY_Code = '{2}'",v.Local.Ssql,v.local.sOrderno,v.Global.sPCompyCode,v.Local.Ssql)
+					f.Data.Datatable.CreateFromSQL("DTContract","conx",v.Local.Ssql,True)
+					f.Intrinsic.Control.If(v.DataTable.DTContract.RowCount,>,0)
+'						gui.frmContract.txtRevision.Visible(true)
+'						gui.frmContract.lblREV.Visible(true)
+'						gui.frmContract.cmdRevHist.Visible(true)
+'						v.Global.bLoad.Set(true)
+						f.Intrinsic.Control.CallSub(Load_Exist)
+'						v.Global.bLoad.Set(false)
+					f.Intrinsic.Control.Else
+					'Load Defaults
+						f.Intrinsic.Control.CallSub(Load_New)
+					f.Intrinsic.Control.EndIf
+'				f.Intrinsic.Control.Else
+'				'New
+'				'Load Defaults
+'					f.Intrinsic.Control.CallSub(Load_New)
+'				f.Intrinsic.Control.EndIf
+			f.Intrinsic.Control.Else
+					f.Intrinsic.UI.Msgbox("Company code not assigned for Dealer")
+'					f.Intrinsic.Control.end
+					f.Intrinsic.Control.CallSub(frmContract_UnLoad)
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.Else
+			'to Customer
+			v.Global.sDCompyCode.Set(v.Caller.CompanyCode.Trim)
+			v.Global.bParent.Set(False)
+
+'			f.Intrinsic.String.Build("select * from GCG_5963_Contract where Dealer_SO = '{0}' and left(Dealer_Contract,3) = '{1}'",V.Local.sOrderno,v.Global.sDCompyCode,v.Local.Ssql)
+			
+			f.Intrinsic.String.Build("{0} where Dealer_SO = '{1}' and left(Dealer_Contract,3) = '{2}'",v.Local.Ssql,V.Local.sOrderno,v.Global.sDCompyCode,v.Local.Ssql)
+			
+			f.Data.Datatable.CreateFromSQL("DTContract","conx",v.Local.Ssql,True)
+			f.Intrinsic.Control.If(v.DataTable.DTContract.RowCount,>,0)
+				'to customer contract exist
+				gui.frmContract.txtOrdno.Text(V.DataTable.DTContract(0).order_no!Fieldval)
+				v.Global.sPCompyCode.Set(V.DataTable.DTContract(0).CMPY_Code!Fieldval)
+				f.Intrinsic.Control.If(V.Local.sOrderno,<>,V.DataTable.DTContract(0).Dealer_SO!Fieldval)
+					v.Global.bContract.Set(True)
+				f.Intrinsic.Control.Else
+					v.Global.bContract.Set(False)
+					gui.frmContract.cmdBrowDPO.Visible(false)
+					gui.frmContract.txtdealerSO.Visible(false)
+					gui.frmContract.lbldealerSO.Visible(false)
+				f.Intrinsic.Control.endif
+'				gui.frmContract.txtRevision.Visible(true)
+'				gui.frmContract.lblREV.Visible(true)
+'				gui.frmContract.cmdRevHist.Visible(true)
+				f.Intrinsic.Control.CallSub(Load_Exist)
+			f.Intrinsic.Control.Else
+							'-------
+				f.Data.Datatable.Close("DTContract")
+				'NO contract
+				v.Global.sPCompyCode.Set(v.Caller.CompanyCode.Trim)
+				v.Global.bContract.Set(False)
+				v.Global.bParent.Set(false)
+				
+				gui.frmContract.cmdBrowDPO.Visible(false)
+				gui.frmContract.txtdealerSO.Visible(false)
+				gui.frmContract.lbldealerSO.Visible(false)
+						
+'				f.Intrinsic.String.Build("select * from GCG_5963_Contract where Order_NO = '{0}' and CMPY_Code = '{1}'",v.local.sOrderno,v.Global.sPCompyCode,v.Local.Ssql)
+				
+'				f.Intrinsic.String.Build("{0} where Order_NO = '{1}' and CMPY_Code = '{2}'",v.Local.Ssql,v.local.sOrderno,v.Global.sPCompyCode,v.Local.Ssql)
+'				f.Data.Datatable.CreateFromSQL("DTContract","conx",v.Local.Ssql,True)
+'				f.Intrinsic.Control.If(v.DataTable.DTContract.RowCount,>,0)
+'					
+'					f.Intrinsic.Control.CallSub(Load_Exist)
+'				f.Intrinsic.Control.Else
+				''no customer records
+					f.Intrinsic.Control.CallSub(Load_New_Cust)
+'				f.Intrinsic.Control.EndIf
+							'--------------
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Else
+		'NO contract
+		v.Global.sPCompyCode.Set(v.Caller.CompanyCode.Trim)
+		v.Global.bContract.Set(False)
+		v.Global.bParent.Set(false)
+		
+		gui.frmContract.cmdBrowDPO.Visible(false)
+		gui.frmContract.txtdealerSO.Visible(false)
+		gui.frmContract.lbldealerSO.Visible(false)
+				
+'		f.Intrinsic.String.Build("select * from GCG_5963_Contract where Order_NO = '{0}' and CMPY_Code = '{1}'",v.local.sOrderno,v.Global.sPCompyCode,v.Local.Ssql)
+		f.Intrinsic.String.Build("{0} where Order_NO = '{1}' and CMPY_Code = '{2}'",v.Local.Ssql,v.local.sOrderno,v.Global.sPCompyCode,v.Local.Ssql)
+		f.Data.Datatable.CreateFromSQL("DTContract","conx",v.Local.Ssql,True)
+		f.Intrinsic.Control.If(v.DataTable.DTContract.RowCount,>,0)
+			
+			f.Intrinsic.Control.CallSub(Load_Exist)
+		f.Intrinsic.Control.Else
+		''no customer records
+			f.Intrinsic.Control.CallSub(Load_New_Cust)
+		f.Intrinsic.Control.EndIf
+		
+	f.Intrinsic.Control.EndIf
+	
+	'8/21/2020 DD - If order is for international billing, rename City/State/Zip to Address 2/Address 3/Address4
+'	f.Intrinsic.Control.If(v.Passed.000054,=,"Y")
+'		gui.frmContract.lblCity.Caption("Address 2")
+'		gui.frmContract.lblState.Caption("Address 3")
+'		gui.frmContract.lblzip.Caption("Address 4")
+'	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.CallSub(LoadGrid)
+	
+	f.Intrinsic.Control.CallSub(LoadPrint)
+	f.Intrinsic.Control.CallSub(Security_Contract)
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.Load_Data.End
+Program.Sub.Load_New.Start
+'	f.Intrinsic.String.LPad(Variable.Passed.000003,"0",7,V.Local.sOrderno)
+'	gui.frmContract.txtOrdno.Text(V.Local.sOrderno)
+	gui.frmContract.txtdealer.Text(Variable.Passed.000008)	
+	gui.frmContract.txtdPaymentTerms.Text(Variable.Passed.000029)
+	
+	f.Intrinsic.Control.If(v.Passed.000054,=,"Y")
+		gui.frmContract.ddlFD.Text("I")
+	f.Intrinsic.Control.Else
+		gui.frmContract.ddlFD.Text("D")
+	f.Intrinsic.Control.EndIf
+Program.Sub.Load_New.End
+Program.Sub.Load_Exist.Start
+f.Intrinsic.Control.Try
+'		f.Intrinsic.Control.If(Variable.Passed.000054.trim,=,"Y")
+'			'flag_Intl
+'			gui.frmContract.txtCity.Text(Variable.Passed.000011.trim)  'ADD2
+'			gui.frmContract.txtState.Text(Variable.Passed.000052.trim)  'ADD3
+'			gui.frmContract.txtzip.Text(Variable.Passed.000053.trim)  'ADD4
+'			'gui.frmContract.txtcounty.Text(Variable.Passed.000055.trim) 'ADD5 Country 
+'		f.Intrinsic.Control.else
+'			gui.frmContract.txtCity.Text(Variable.Passed.000013.trim)
+'			gui.frmContract.txtState.Text(Variable.Passed.000014.trim)
+'			gui.frmContract.txtzip.Text(Variable.Passed.000015.trim)
+'			'gui.frmContract.txtcounty.Text(Variable.Passed.000019.trim)
+'		f.Intrinsic.Control.EndIf
+		
+'		(V.DataTable.DTContract(0).Dealer_Code!Fieldval '- company code  (determines dealer or customer)
+
+		gui.frmContract.ddlType.Text(V.DataTable.DTContract(0).Contract_Type!Fieldval)
+		gui.frmContract.ddlFD.Text(V.DataTable.DTContract(0).Foreign_Domestic!Fieldval)
+		gui.frmContract.txtContractO.Text(V.DataTable.DTContract(0).OR_contract!Fieldval)
+		gui.frmContract.txtPL.Text(V.DataTable.DTContract(0).Product_Line!Fieldval)
+		gui.frmContract.txtdealer.text(V.DataTable.DTContract(0).Dealer_Name!Fieldval)
+		gui.frmContract.txtContractD.Text(V.DataTable.DTContract(0).Dealer_Contract!Fieldval)
+		gui.frmContract.txtloc.Text(V.DataTable.DTContract(0).Location!Fieldval)
+		gui.frmContract.txtdealerSO.Text(V.DataTable.DTContract(0).Dealer_SO!Fieldval)
+		gui.frmContract.txtdealerPO.Text(V.DataTable.DTContract(0).Dealer_PO!Fieldval)
+		gui.frmContract.txtCustomer.Text(V.DataTable.DTContract(0).Organization_Customer!Fieldval)
+		gui.frmContract.txtCustomerAddl.Text(V.DataTable.DTContract(0).CustomerAddl!Fieldval)
+		gui.frmContract.txtRanch.Text(V.DataTable.DTContract(0).Ranch_Orchad!Fieldval)
+		gui.frmContract.txtLname.Text(V.DataTable.DTContract(0).Lname!Fieldval)
+		gui.frmContract.txtfname.Text(V.DataTable.DTContract(0).Fname!Fieldval)
+		gui.frmContract.txtsignator.Text(V.DataTable.DTContract(0).Signator!Fieldval)
+		Gui.frmContract.txtAdd1.Text(V.DataTable.DTContract(0).Address!Fieldval)
+		gui.frmContract.txtCity.Text(V.DataTable.DTContract(0).City!Fieldval)
+		gui.frmContract.txtState.Text(V.DataTable.DTContract(0).State!Fieldval)
+		gui.frmContract.txtzip.Text(V.DataTable.DTContract(0).Zipcode!Fieldval)
+		gui.frmContract.txtcounty.Text(V.DataTable.DTContract(0).County!Fieldval)
+		gui.frmContract.txtTel.Text(V.DataTable.DTContract(0).Telephone!Fieldval)
+		gui.frmContract.txtEmail.Text(V.DataTable.DTContract(0).Email!Fieldval)
+		gui.frmContract.txtFinance.Text(V.DataTable.DTContract(0).Financial_Inst!Fieldval)
+		gui.frmContract.ddlcash.Text(V.DataTable.DTContract(0).Cash!Fieldval)
+		gui.frmContract.txtmultcomments.Text(V.DataTable.DTContract(0).Comments!Fieldval)
+		gui.frmContract.ddlshipapproval.Text(V.DataTable.DTContract(0).Ship_Approval!Fieldval)
+		gui.frmContract.dtpshipApproval.value(V.DataTable.DTContract(0).ShipApproval_Date!Fieldval)
+		gui.frmContract.ddlbaseapproval.Text(V.DataTable.DTContract(0).Base_Approval!Fieldval)
+		gui.frmContract.ddlinstallapproval.Text(V.DataTable.DTContract(0).Install_Approval!Fieldval)
+		gui.frmContract.dtpInstallApproval.value(V.DataTable.DTContract(0).InstallApproval_Date!Fieldval)
+		gui.frmContract.ddlextwarranty.Text(V.DataTable.DTContract(0).Extended_Warranty!Fieldval)
+		gui.frmContract.txtPaymentTerms.Text(V.DataTable.DTContract(0).Payment_Terms!Fieldval)
+		gui.frmContract.txtmiscterms.Text(V.DataTable.DTContract(0).Miscellenous_Terms!Fieldval)
+		gui.frmContract.txtAdeliverydate.text(V.DataTable.DTContract(0).Anti_DelDt!Fieldval)
+		gui.frmContract.txtdPaymentTerms.Text(V.DataTable.DTContract(0).D_Payment_Terms!Fieldval)
+		gui.frmContract.txtdmiscterms.Text(V.DataTable.DTContract(0).D_Miscellenous_Terms!Fieldval)
+		gui.frmContract.dtpDAdeliverydate.text(V.DataTable.DTContract(0).D_Anti_DelDtNEW!Fieldval)
+		gui.frmContract.txEmailTo.Text(V.DataTable.DTContract(0).Email_To!Fieldval)
+		gui.frmContract.dtpMaildt.value(V.DataTable.DTContract(0).Mail_Dt!Fieldval)
+		gui.frmContract.dtpDSchShipDt.value(V.DataTable.DTContract(0).D_Scheduled_Dt!Fieldval)
+		gui.frmContract.dtpPricegood.value(V.DataTable.DTContract(0).Price_Good!Fieldval)
+		gui.frmContract.txtcrop.Text(V.DataTable.DTContract(0).Crop!Fieldval)
+		gui.frmContract.txtdept.Text(V.DataTable.DTContract(0).Dept!Fieldval)
+		gui.frmContract.txtsold.Text(V.DataTable.DTContract(0).Sold_BY!Fieldval)
+		gui.frmContract.txtUCCproperty.Text(V.DataTable.DTContract(0).UCC_Property!Fieldval)
+		gui.frmContract.dtpcontractdt.value(V.DataTable.DTContract(0).contract_dt!Fieldval)
+		gui.frmContract.txtSalesTax.text(V.DataTable.DTContract(0).SalesTax!Fieldval)
+		gui.frmContract.txtRevisionPrint.text(V.DataTable.DTContract(0).Revised_Text!Fieldval)
+		f.Data.Datatable.Close("DTContract")
+		
+		f.Intrinsic.Control.CallSub(LoadRevision)
+		
+		'DD - 8/25/2020 - Sets the City/State/Zip labels according to the foreign or domestic status selected
+		f.Intrinsic.Control.CallSub(ddlFD_Change)
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.Load_Exist.End
+
+Program.Sub.Load_New_Cust.Start
+f.Intrinsic.Control.Try
+
+V.Local.sOrderno.Declare
+v.Local.sCmpyName.Declare
+V.Local.sRet1.Declare
+
+	'Variable.Passed.000007  BillTo Name
+'Variable.Passed.000009  Bill Add1
+'Variable.Passed.000014  Bill ST
+'Variable.Passed.000013  Bill City
+'Variable.Passed.000019  Bill Country
+'Variable.Passed.000029   Terms
+'Variable.Passed.000030   saleman
+'Variable.Passed.000015 Zipcode
+	
+'	f.Intrinsic.String.LPad(Variable.Passed.000003,"0",7,V.Local.sOrderno)
+'	gui.frmContract.txtOrdno.Text(V.Local.sOrderno)
+'	v.Global.sPCompyCode.Set(v.Caller.CompanyCode.trim)
+'	v.Global.bNew.set(true)
+'	v.Global.bContract.Set(False)
+
+	
+	gui.frmContract.txtCustomer.Text(Variable.Passed.000007.trim)
+	Gui.frmContract.txtAdd1.Text(Variable.Passed.000009.trim)
+
+	f.Intrinsic.Control.If(Variable.Passed.000054.trim,=,"Y")
+		'flag_Intl
+'		f.Intrinsic.String.Split(Variable.Passed.000011.trim," ",V.Local.sRet1)
+'		
+'		f.Intrinsic.Control.If(V.Local.sRet1.UBound,>,2)
+'			gui.frmContract.txtCity.Text(V.Local.sRet1(0).trim)  'City 
+'			gui.frmContract.txtState.Text(V.Local.sRet1(1).trim)  'State 
+'			
+'			
+'			gui.frmContract.txtzip.Text(V.Local.sRet1(2).trim)  'CodeZip 
+'			
+'		f.Intrinsic.Control.elseIf(V.Local.sRet1.UBound,=,2)
+'			gui.frmContract.txtCity.Text(V.Local.sRet1(0).trim)  'City 
+'			gui.frmContract.txtState.Text(V.Local.sRet1(1).trim)  'State 
+'			gui.frmContract.txtzip.Text(V.Local.sRet1(2).trim)  'CodeZip 
+'		f.Intrinsic.Control.elseIf(V.Local.sRet1.UBound,=,1)
+'			gui.frmContract.txtCity.Text(V.Local.sRet1(0).trim)  'City 
+'			gui.frmContract.txtState.Text(V.Local.sRet1(1).trim)  'State 
+'		f.Intrinsic.Control.elseIf(V.Local.sRet1.UBound,=,0)
+'			gui.frmContract.txtCity.Text(V.Local.sRet1(0).trim)  'City 
+'		f.Intrinsic.Control.EndIf
+
+		gui.frmContract.txtCity.Text(Variable.Passed.000011.trim)  'ADD2
+		gui.frmContract.txtState.Text(Variable.Passed.000052.trim)  'ADD3
+		gui.frmContract.txtzip.Text(Variable.Passed.000053.trim)  'ADD4
+		gui.frmContract.txtcounty.Text(Variable.Passed.000055.trim) 'ADD5 Country 
+	f.Intrinsic.Control.else
+		gui.frmContract.txtCity.Text(Variable.Passed.000013.trim)
+		gui.frmContract.txtState.Text(Variable.Passed.000014.trim)
+		gui.frmContract.txtzip.Text(Variable.Passed.000015.trim)
+		gui.frmContract.txtcounty.Text(Variable.Passed.000019.trim)
+	f.Intrinsic.Control.EndIf
+	
+	gui.frmContract.txtPaymentTerms.Text(Variable.Passed.000029.trim)
+	gui.frmContract.txtsold.Text(Variable.Passed.000030.trim)
+	gui.frmContract.txtTel.Text(Variable.Passed.000051.trim)  
+	
+	gui.frmContract.txtdealerPO.text(Variable.Passed.000025.trim)
+'	F.Global.General.ReadOption("130000",1,"","0000",v.Local.sCmpyName)
+	gui.frmContract.txtdealer.Text(Variable.Passed.000007.trim)
+	
+	
+'	gui.frmContract.txtTel.Text(V.Local.sRet(7).trim)  
+'	gui.frmContract.txtEmail.Text(V.Local.sRet(8).trim)  
+	
+	
+'	gui.frmContract.lbldealername.Visible(false)
+'	gui.frmContract.lbldealerPO.Visible(false)
+'	gui.frmContract.lblDealercontract.Visible(false)
+'	gui.frmContract.lbllocation.Visible(false)
+'	gui.frmContract.lbldealeranti.Visible(false)
+'	gui.frmContract.lbldealerpayterms.Visible(false)
+'	gui.frmContract.lbldealerschdate.Visible(false)
+'	gui.frmContract.lbldealerMisc.Visible(false)
+'	
+'	gui.frmContract.txtdealerPO.Visible(false)
+'	gui.frmContract.txtdealer.Visible(false)
+'	gui.frmContract.txtContractD.Visible(false)
+'	gui.frmContract.txtdPaymentTerms.Visible(false)
+'	gui.frmContract.txtloc.Visible(false)
+'	
+'	gui.frmContract.txtdmiscterms.Visible(false)
+'	gui.frmContract.dtpDAdeliverydate.Visible(false)
+'	gui.frmContract.dtpDSchShipDt.Visible(false)
+
+'	gui.frmContract.txtdealerSO.Locked(false)
+	
+	gui.frmContract.cmdBrowDPO.Visible(false)
+	gui.frmContract.txtdealerSO.Visible(false)
+	gui.frmContract.lbldealerSO.Visible(false)
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.Load_New_Cust.End
+
+Program.Sub.cmdBrowPL_Click.Start
+f.Intrinsic.Control.Try
+V.Local.sTitles.Declare
+V.Local.sRet.Declare
+V.Local.iWidths.Declare
+
+
+F.Intrinsic.String.Split("Product Line*!*Description*!*Name","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1800*!*1800*!*1800","*!*",V.Local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+Function.Intrinsic.UI.SetBrowserOOT(True)
+
+F.Intrinsic.UI.Browser("Select a Contact","conx","SELECT PROD_LINE AS 'Product Line', DESCR AS 'Description', PL_NAME AS 'Name' FROM PL_MASTER",V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	gui.frmContract.txtPL.Text(V.Local.sRet(0))
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdBrowPL_Click.End
+Program.Sub.ErrorMsg.Start
+v.Local.sError.Declare
+
+f.Intrinsic.String.Build("Project GCG_5963_Contract.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, v.Args.CurrentSub, v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+
+f.Intrinsic.UI.Msgbox(v.Local.sError)
+
+
+Program.Sub.ErrorMsg.End
+Program.Sub.Security_Contract.Start
+f.Intrinsic.Control.Try
+
+V.Local.bValue.Declare
+
+'V.Local.sCuser.Set(v.Caller.User)
+'V.Local.sCCmpy.Set(v.Caller.CompanyCode)
+'f.Global.Security.IsInGroup(V.Local.sCuser.trim,"PLDASH",V.Local.sCCmpy.trim,V.Local.bValue)
+f.Global.Security.IsInGroup(v.Caller.User.trim,"CONTRACT",V.Local.bValue)
+f.Intrinsic.Control.If(V.Local.bValue,=,false)
+	gui.frmContract.ddlType.locked(True)
+	gui.frmContract.ddlFD.locked(True)
+	gui.frmContract.txtloc.locked(True)
+	gui.frmContract.txtRanch.locked(True)
+	gui.frmContract.txtLname.locked(True)
+	gui.frmContract.txtfname.locked(True)
+	gui.frmContract.txtsignator.locked(True)
+	gui.frmContract.txtFinance.locked(True)
+	gui.frmContract.ddlcash.locked(True)
+	gui.frmContract.txtmultcomments.locked(True)
+	gui.frmContract.ddlshipapproval.locked(True)
+	gui.frmContract.dtpshipApproval.locked(True)
+	gui.frmContract.ddlbaseapproval.locked(True)
+	gui.frmContract.ddlinstallapproval.locked(True)
+	gui.frmContract.dtpInstallApproval.locked(True)
+'	gui.frmContract.ddlasis.locked(True)
+'	gui.frmContract.ddlwarranty.locked(True)
+	gui.frmContract.ddlextwarranty.locked(True)
+'	gui.frmContract.ddlnrcs.locked(True)
+	gui.frmContract.txtPaymentTerms.locked(True)
+	gui.frmContract.txtmiscterms.locked(True)
+	gui.frmContract.txtAdeliverydate.locked(True)
+	gui.frmContract.txtdPaymentTerms.locked(True)
+	gui.frmContract.txtdmiscterms.locked(True)
+	gui.frmContract.dtpDAdeliverydate.locked(True)
+	gui.frmContract.txEmailTo.locked(True)
+	gui.frmContract.dtpMaildt.locked(True)
+	gui.frmContract.dtpDSchShipDt.locked(True)
+	gui.frmContract.dtpPricegood.locked(True)
+	gui.frmContract.txtcrop.locked(True)
+	gui.frmContract.txtdept.locked(True)
+	gui.frmContract.txtsold.locked(True)
+	gui.frmContract.txtUCCproperty.locked(True)
+	gui.frmContract.cmdBrowPL.Locked(True)
+	gui.frmContract.cmdBrowsalesperson.Locked(True)
+	gui.frmContract.cmdBrowDPO.Visible(false)
+	gui.frmContract.cmdMSave.visible(false)
+	gui.frmContract.cmdRefresh.visible(false)
+	gui.frmContract.cmdBrowPaymentTerms.visible(True)
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.Security_Contract.End
+
+Program.Sub.txtdealerSO_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtdealerSO")
+Program.Sub.txtdealerSO_Change.End
+
+Program.Sub.dtpDAdeliverydate_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","dtpDAdeliverydate")
+Program.Sub.dtpDAdeliverydate_Change.End
+
+Program.Sub.ddlType_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","ddlType")
+Program.Sub.ddlType_Change.End
+
+Program.Sub.ddlFD_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","ddlFD")
+	
+	'8/21/2020 DD - If order is for international billing, rename City/State/Zip to Address 2/Address 3/Address4
+	f.Intrinsic.Control.If(v.Screen.frmContract!ddlFD.Text,=,"I")
+		gui.frmContract.lblCity.Caption("Address 2")
+		gui.frmContract.lblState.Caption("Address 3")
+		gui.frmContract.lblzip.Caption("Address 4")
+	f.Intrinsic.Control.Else
+		gui.frmContract.lblCity.Caption("City")
+		gui.frmContract.lblState.Caption("State")
+		gui.frmContract.lblzip.Caption("Zipcode")
+	f.Intrinsic.Control.EndIf
+Program.Sub.ddlFD_Change.End
+
+Program.Sub.txtPL_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtPL")
+Program.Sub.txtPL_Change.End
+
+Program.Sub.txtdealer_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtdealer")
+Program.Sub.txtdealer_Change.End
+
+Program.Sub.txtloc_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtloc")
+Program.Sub.txtloc_Change.End
+
+Program.Sub.txtCustomer_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtCustomer")
+Program.Sub.txtCustomer_Change.End
+
+Program.Sub.txtRanch_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtRanch")
+Program.Sub.txtRanch_Change.End
+
+Program.Sub.txtLname_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtLname")
+Program.Sub.txtLname_Change.End
+
+Program.Sub.txtfname_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtfname")
+Program.Sub.txtfname_Change.End
+
+Program.Sub.txtsignator_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtsignator")
+Program.Sub.txtsignator_Change.End
+
+Program.Sub.txtAdd1_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtAdd1")
+Program.Sub.txtAdd1_Change.End
+
+Program.Sub.txtCity_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtCity")
+Program.Sub.txtCity_Change.End
+
+Program.Sub.txtState_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtState")
+Program.Sub.txtState_Change.End
+
+Program.Sub.txtzip_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtzip")
+Program.Sub.txtzip_Change.End
+
+Program.Sub.txtcounty_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtcounty")
+Program.Sub.txtcounty_Change.End
+
+Program.Sub.txtTel_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtTel")
+Program.Sub.txtTel_Change.End
+
+Program.Sub.txtFinance_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtFinance")
+Program.Sub.txtFinance_Change.End
+
+Program.Sub.txtmultcomments_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtmultcomments")
+Program.Sub.txtmultcomments_Change.End
+
+Program.Sub.ddlshipapproval_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","ddlshipapproval")
+Program.Sub.ddlshipapproval_Change.End
+
+Program.Sub.ddlbaseapproval_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","ddlbaseapproval")
+Program.Sub.ddlbaseapproval_Change.End
+
+Program.Sub.ddlinstallapproval_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","ddlinstallapproval")
+Program.Sub.ddlinstallapproval_Change.End
+
+Program.Sub.dtpshipApproval_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","dtpshipApproval")
+Program.Sub.dtpshipApproval_Change.End
+
+Program.Sub.dtpInstallApproval_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","dtpInstallApproval")
+Program.Sub.dtpInstallApproval_Change.End
+
+'Program.Sub.ddlasis_Change.Start
+'	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","ddlasis")
+'Program.Sub.ddlasis_Change.End
+
+'Program.Sub.ddlwarranty_Change.Start
+'	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","ddlwarranty")
+'Program.Sub.ddlwarranty_Change.End
+
+Program.Sub.ddlextwarranty_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","ddlextwarranty")
+Program.Sub.ddlextwarranty_Change.End
+
+'Program.Sub.ddlnrcs_Change.Start
+'	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","ddlnrcs")
+'Program.Sub.ddlnrcs_Change.End
+
+Program.Sub.txtpaymentterms_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtpaymentterms")
+Program.Sub.txtpaymentterms_Change.End
+
+Program.Sub.txtmiscterms_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtmiscterms")
+Program.Sub.txtmiscterms_Change.End
+
+Program.Sub.txtsold_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtsold")
+Program.Sub.txtsold_Change.End
+
+Program.Sub.txtdept_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtdept")
+Program.Sub.txtdept_Change.End
+
+Program.Sub.txtcrop_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtcrop")
+Program.Sub.txtcrop_Change.End
+
+Program.Sub.dtpPricegood_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","dtpPricegood")
+Program.Sub.dtpPricegood_Change.End
+
+Program.Sub.txtUCCproperty_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtUCCproperty")
+Program.Sub.txtUCCproperty_Change.End
+
+Program.Sub.dtpDSchShipDt_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","dtpDSchShipDt")
+Program.Sub.dtpDSchShipDt_Change.End
+
+Program.Sub.txtdmiscterms_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtdmiscterms")
+Program.Sub.txtdmiscterms_Change.End
+
+Program.Sub.txtEmailTo_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","txtEmailTo")
+Program.Sub.txtEmailTo_Change.End
+
+Program.Sub.dtpMaildt_Change.Start
+	f.Intrinsic.Control.CallSub(SaveBackcolor_Alert,"CNTRL","dtpMaildt")
+Program.Sub.dtpMaildt_Change.End
+
+Program.Sub.SaveBackcolor_Alert.Start
+f.Intrinsic.Control.If(v.Global.bLoad,=,false)
+'	gui.frmContract.[v.Args.CNTRL].BackColor(LightSalmon)
+''	gui.frmContract.[v.Args.CNTRL].BackColor(Window)
+f.Intrinsic.Control.endif
+Program.Sub.SaveBackcolor_Alert.End
+
+Program.Sub.cmdBrowPaymentTerms_Click.Start
+f.Intrinsic.Control.Try
+
+V.Local.sTitles.Declare
+V.Local.sRet.Declare
+V.Local.iWidths.Declare
+v.Local.ssql.Declare
+
+f.Intrinsic.Control.If(v.Global.bParent)
+	f.Intrinsic.String.Build("select Terms from  GLOBAL{0}.order_header where Order_no= '{1}' and Record_type = 'A'",v.Global.sDCompyCode,v.Screen.frmContract!txtdealerSO.text,v.Local.ssql)
+f.Intrinsic.Control.Else
+	f.Intrinsic.String.Build("select Terms from  order_header where Order_no= '{0}' and Record_type = 'A'",v.Screen.frmContract!txtdealerSO.text,v.Local.ssql)
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Split("Terms","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1800","*!*",V.Local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+Function.Intrinsic.UI.SetBrowserOOT(True)
+
+F.Intrinsic.UI.Browser("Select Terms","conx",v.Local.ssql,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	gui.frmContract.txtpaymentterms.Text(V.Local.sRet(0))
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdBrowPaymentTerms_Click.End
+
+Program.Sub.cmdPrint_Click.Start
+f.Intrinsic.Control.Try
+V.local.iBiRunID.Declare(long)
+V.local.iBILogID.Declare(long)
+V.Local.sRet.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.sValues.Declare(String)
+V.Local.sSQL.Declare
+V.Local.iRptid.Declare
+v.Local.sfile.Declare
+V.Local.iRet.Declare
+V.local.sOUTPUTFile.Declare
+V.local.sFile1.Declare
+V.local.sFile2.Declare
+V.local.sFileOut.Declare
+V.Local.iHdl.Declare
+v.Local.sCmpyName.Declare
+V.local.sDocumentList.Declare
+V.local.sCMPYLOGO.Declare
+V.local.sCMPYLOGOPath.Declare
+v.Local.fCredit.Declare
+v.Local.fDeposit.Declare
+v.Local.sPrint.Declare
+v.Local.i.Declare
+v.local.bret.Declare
+v.local.bret1.Declare
+v.Local.fSalesTax.Declare
+v.Local.fDiscount.Declare
+v.Local.bFileExists.Declare
+V.Local.lcontract.Declare
+V.Local.sRevision.Declare
+
+	F.Intrinsic.UI.InvokeWaitDialog("Print in Progress...","Please Wait...")
+	
+'	Cascade logo March 2020.jpg
+'	Orchard-Rite logo March 2020.jpg
+'	PDI logo March 2020.jpg
+'	Superior logo March 2020.jpg
+
+
+	f.Data.DataView.Create("DTPrint","DVPrint",22,"Select=True","")
+	f.Intrinsic.Control.If(V.DataView.DTPrint!DVPrint.RowCount,>,0)
+		f.Intrinsic.Control.For(v.Local.i,0,V.DataView.DTPrint!DVPrint.RowCount--,1)
+			f.Intrinsic.String.Build("{0}*!*{1}",v.Local.sPrint,v.DataView.DTPrint!DVPrint(v.Local.i).Value!Fieldval,v.Local.sPrint)
+		f.Intrinsic.Control.Next(v.Local.i)
+		f.Data.DataView.Close("DTPrint","DVPrint")
+	f.Intrinsic.Control.EndIf
+	
+	Function.Intrinsic.String.IsInString(v.Local.sPrint,"O",True,v.local.bret)
+	Function.Intrinsic.String.IsInString(v.Local.sPrint,"D",True,v.local.bret1)
+'	f.Intrinsic.Control.if(v.DataTable.DTPrint(0).Select!Fieldval,=,True,"or",v.DataTable.DTPrint(1).Select!Fieldval,=,True)
+	f.Intrinsic.Control.if(v.local.bret,=,True,"or",v.local.bret1,=,True)
+		F.Intrinsic.String.Build("delete from GCG_5963_Rpt where Trml = '{0}'",V.Caller.Terminal.Long,V.Local.sSQL)
+		f.ODBC.Connection!conx.execute(V.Local.sSQL)
+	
+		f.Data.DataTable.AddExpressionColumn("DTLines","CustomerPrice1","Float","CustomerPrice")
+		f.Data.DataTable.AddExpressionColumn("DTLines","DealerPrice1","Float","DealerPrice")
+	'	f.Data.DataTable.AddExpressionColumn("DTLines","DealerPrice1","Float","Convert([DealerPrice],'System.Int32')")
+		F.Data.DataTable.SaveToDB("DTLines","conx","GCG_5963_Rpt","Trml*!*Order_No*!*Record_No",256,"Order_No@!@Order_No*!*Trml@!@Trml*!*Part@!@Part*!*CustomerPrice1@!@Cust_Price*!*DealerPrice1@!@Dealer_Price*!*Quantity@!@Qty*!*Description@!@Part_Desc*!*Record_No@!@Record_No")
+	
+		f.Data.Datatable.RemoveColumn("DTLines","CustomerPrice1")
+		f.Data.Datatable.RemoveColumn("DTLines","DealerPrice1")
+	f.Intrinsic.Control.EndIf
+	
+	
+	F.Intrinsic.Control.If(V.DataTable.DTRevision.Exists)
+		f.Intrinsic.Control.If(v.DataTable.DTRevision.RowCount,>,0)
+			F.Intrinsic.String.Format(v.DataTable.DTRevision(0).Rev_Date!Fieldval,"MM/DD/YYYY",V.Local.sRevision)
+		f.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+
+'Dealer Contract
+'	f.Intrinsic.Control.if(v.DataTable.DTPrint(0).Select!Fieldval,=,True)
+	f.Intrinsic.Control.if(v.local.bret)
+		F.Intrinsic.UI.ChangeWaitStatus("Dealer contract Print in Progress...",10,1,100)
+		f.Intrinsic.Control.If(v.Global.sPCompyCode,=,"TST","OR",v.Global.sPCompyCode,=,"ORT")
+			f.Intrinsic.Control.If(v.Screen.frmContract!txtPL.Text,=,"TS")
+				V.local.sCMPYLOGO.Set("Tree Shaker Logo.jpg")
+'				V.local.sCMPYLOGO.Set("Tree Shaker Logo - small.jpg")
+'				V.local.sCMPYLOGO.Set("Tree Shaker Logo.jpg")
+			f.Intrinsic.Control.Else
+'				V.local.sCMPYLOGO.Set("Orchard-Rite logo March 2020.jpg")
+				V.local.sCMPYLOGO.Set("Orchard-Rite Logo with PO Box.jpg")
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.endif
+		
+		
+'		f.Intrinsic.String.Build("C:\Temp\Current\Orchard Rite - Contract Generations\logo\{0}",V.local.sCMPYLOGO,V.local.sCMPYLOGOPath)
+		f.Intrinsic.String.Build("{0}\LOGOS\{1}",v.Caller.BusintDir,V.local.sCMPYLOGO,V.local.sCMPYLOGOPath)
+	
+		F.Global.BI.GetRunID(V.local.iBIRunID)
+		F.Global.BI.GetIDFromName("GCG_5963_ContractDealer.rpt",V.Local.iRptid)
+'		F.Intrinsic.String.Build("{0}ContractDealer.pdf",v.Caller.LocalGSSTempDir,V.local.sFile1)
+		F.Global.BI.StartLogging(V.Local.iBIRunID,V.Local.iRptid,0,"",V.Local.iBILogID)
+		
+		F.Global.BI.StopLogging(V.local.iBILogID)
+		
+		'Get Company Name
+		F.Global.General.ReadOption("130000",1,"","0000",v.Local.sCmpyName)
+	
+		V.Local.sParams.Set("Trmnl*!*Credit*!*Deposit*!*CmpyName*!*RType*!*Cmpy_Logo*!*SalesTax*!*Discount*!*Contract*!*TDESC*!*CmpyCode*!*Revision")
+		f.Intrinsic.Control.If(v.Global.bContract)
+'			v.Local.fCredit.Set(0)
+			v.Local.fCredit.Set(v.Global.fCreditDealer)
+			v.Local.fDeposit.Set(0)
+			v.Local.fSalesTax.Set(0)
+			v.Local.fDiscount.Set(0)
+			V.Local.lcontract.Set(1)
+		f.Intrinsic.Control.Else
+			v.Local.fCredit.Set(v.Global.fCredit)
+			v.Local.fDeposit.Set(v.Global.fDEPOSIT)
+			v.Local.fDiscount.set(v.Global.fDISCOUNT)
+			v.Local.fSalesTax.Set(v.Screen.frmContract!txtSalesTax.text)
+			V.Local.lcontract.Set(0)
+		f.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}*!*{8}*!*{9}*!*{10}*!*{11}",v.Caller.Terminal.Long,v.Local.fCredit,v.Local.fDeposit,v.Local.sCmpyName.trim,"N",V.local.sCMPYLOGOPath,v.Local.fSalesTax,v.Local.fDiscount,V.Local.lcontract,v.Global.sTRADE-DESC,v.Global.sPCompyCode,V.Local.sRevision,V.Local.sValues)
+
+		f.Intrinsic.String.Build("{0}ContractDealer.pdf",v.Caller.LocalGSSTempDir,v.Local.sfile)
+		F.Intrinsic.File.Exists(V.local.sfile,V.Local.bFileExists)
+		F.Intrinsic.Control.If(V.Local.bFileExists,=,True)
+			F.Intrinsic.File.DeleteFile(V.local.sfile)
+		F.Intrinsic.Control.EndIf
+		V.local.sOUTPUTFile.Set(v.Local.sfile)
+		F.Global.BI.RunReportPreProcessor(V.local.iBiRunID,V.local.iBILogID,V.Local.sParams,V.Local.sValues,"",4,True,"",-1,"",0,v.Local.sfile,"",V.Local.iRet)
+	f.Intrinsic.Control.EndIf
+
+'Customer Contract
+'	f.Intrinsic.Control.if(v.DataTable.DTPrint(1).Select!Fieldval,=,True)
+	f.Intrinsic.Control.if(v.local.bret1)
+		F.Intrinsic.UI.ChangeWaitStatus("Customer contract Print in Progress...",25,1,100)
+'		f.Intrinsic.Control.If(v.Global.sDCompyCode,=,"TST")
+'			V.local.sCMPYLOGO.Set("Cascade logo March 2020.jpg")
+'		f.Intrinsic.Control.endif
+		
+
+'		f.Intrinsic.Control.If(v.Global.sDCompyCode,=,"CSW","or",v.Global.sDCompyCode,=,"TS2")
+		f.Intrinsic.Control.If(v.Global.sDCompyCode,=,"CWM","or",v.Global.sDCompyCode,=,"TS2")
+'			V.local.sCMPYLOGO.Set("Cascade logo March 2020.jpg")
+			V.local.sCMPYLOGO.Set("Cascade logo with PO Box.jpg")
+		f.Intrinsic.Control.elseIf(v.Global.sDCompyCode,=,"PDI","or",v.Global.sDCompyCode,=,"TS3")
+			f.Intrinsic.Control.If(v.Screen.frmContract!txtPL.Text,=,"TS")
+'				V.local.sCMPYLOGO.Set("Tree Shaker Logo - small.jpg")
+				V.local.sCMPYLOGO.Set("Tree Shaker Logo.jpg")
+			f.Intrinsic.Control.Else
+'				V.local.sCMPYLOGO.Set("PDI logo March 2020.jpg")
+				V.local.sCMPYLOGO.Set("PDI Logo with PO Box.jpg")
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.elseIf(v.Global.sDCompyCode,=,"SWM")
+'			V.local.sCMPYLOGO.Set("Superior logo March 2020.jpg")
+			V.local.sCMPYLOGO.Set("Superior logo with PO Box.jpg")
+		f.Intrinsic.Control.EndIf
+	
+'		f.Intrinsic.String.Build("C:\Temp\Current\Orchard Rite - Contract Generations\logo\{0}",V.local.sCMPYLOGO,V.local.sCMPYLOGOPath)
+		f.Intrinsic.String.Build("{0}\LOGOS\{1}",v.Caller.BusintDir,V.local.sCMPYLOGO,V.local.sCMPYLOGOPath)
+
+		F.Global.BI.GetRunID(V.local.iBIRunID)
+		F.Global.BI.GetIDFromName("GCG_5963_ContractCUST.rpt",V.Local.iRptid)
+		F.Global.BI.StartLogging(V.Local.iBIRunID,V.Local.iRptid,0,"",V.Local.iBILogID)
+		
+		F.Global.BI.StopLogging(V.local.iBILogID)
+		
+		v.Local.fSalesTax.Set(v.Screen.frmContract!txtSalesTax.text)
+		v.Local.sCmpyName.Set(v.Screen.frmContract!txtdealer.Text)
+		V.Local.sParams.Set("Trmnl*!*Credit*!*Deposit*!*CmpyName*!*RType*!*Cmpy_Logo*!*SalesTax*!*Discount*!*TDESC*!*CmpyCode*!*Revision")
+
+		F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}*!*{8}*!*{9}*!*{10}",v.Caller.Terminal.Long,v.Global.fCredit,v.Global.fDEPOSIT,v.Local.sCmpyName.trim,v.Screen.frmContract!ddlType.text,V.local.sCMPYLOGOPath,v.Local.fSalesTax,v.Global.fDiscount.Float,v.Global.sTRADE-DESC,v.Global.sPCompyCode,V.Local.sRevision,V.Local.sValues)
+
+		f.Intrinsic.String.Build("{0}ContractCustomer.pdf",v.Caller.LocalGSSTempDir,v.Local.sfile)
+		F.Intrinsic.File.Exists(V.local.sfile,V.Local.bFileExists)
+		F.Intrinsic.Control.If(V.Local.bFileExists,=,True)
+			F.Intrinsic.File.DeleteFile(V.local.sfile)
+		F.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.Control.If(V.local.sOUTPUTFile,<>,"")
+			f.Intrinsic.String.Build("{0}*!*{1}",V.local.sOUTPUTFile,v.Local.sfile,V.local.sOUTPUTFile)
+		f.Intrinsic.Control.Else
+			V.local.sOUTPUTFile.Set(v.Local.sfile)
+		f.Intrinsic.Control.endif
+		F.Global.BI.RunReportPreProcessor(V.local.iBiRunID,V.local.iBILogID,V.Local.sParams,V.Local.sValues,"",4,True,"",-1,"",0,v.Local.sfile,"",V.Local.iRet)
+	f.Intrinsic.Control.EndIf
+
+
+'Document Control
+'	f.Intrinsic.Control.if(v.DataTable.DTPrint(2).Select!Fieldval,=,True)
+	Function.Intrinsic.String.IsInString(v.Local.sPrint,"A",True,v.local.bret)
+	f.Intrinsic.Control.if(v.local.bret)
+		F.Intrinsic.UI.ChangeWaitStatus("Document Control Print in Progress...",50,1,100)
+		'00045 order header document link
+		f.Intrinsic.String.Build("select CONCAT(rtrim(A."PATH"),rtrim(file)) from ATG_DOC_ASSOC A join LINK_DATA D on CAST(D.link_ID AS integer) = A.link_ID  where  type = '00045' and ID = '{0}' and ucase(file) like '%PDF'",v.Screen.frmContract!txtOrdno.text,V.Local.sSQL)
+		f.Data.Datatable.CreateFromSQL("DTLink","conx",V.Local.sSQL)
+		f.Data.Dataview.Create("DTLink","DVLink")
+		Function.Data.DataView.ToString("DTLink","DVLink","","*!*",V.local.sDocumentList)
+		f.Data.DataView.Close("DTLink","DVLink")
+		f.Data.Datatable.Close("DTLink")
+		
+		f.Intrinsic.Control.If(V.local.sDocumentList.Trim,<>,"")
+			f.Intrinsic.Control.If(V.local.sOUTPUTFile,<>,"")
+				f.Intrinsic.String.Build("{0}*!*{1}",V.local.sOUTPUTFile,v.Local.sDocumentList,V.local.sOUTPUTFile)
+			f.Intrinsic.Control.Else
+				V.local.sOUTPUTFile.Set(V.local.sDocumentList)
+			f.Intrinsic.Control.endif
+		f.Intrinsic.Control.EndIf	
+	f.Intrinsic.Control.EndIf
+	'UCC Document
+	Function.Intrinsic.String.IsInString(v.Local.sPrint,"U",True,v.local.bret)
+	f.Intrinsic.Control.if(v.local.bret)
+	
+		F.Global.BI.GetRunID(V.local.iBIRunID)
+		F.Global.BI.GetIDFromName("GCG_5963_UCC.rpt",V.Local.iRptid)
+		
+		F.Global.BI.StartLogging(V.Local.iBIRunID,V.Local.iRptid,0,"",V.Local.iBILogID)
+		
+		F.Global.BI.StopLogging(V.local.iBILogID)
+		
+
+		F.Intrinsic.String.Build("{0}ContractUCC.pdf",v.Caller.LocalGSSTempDir,V.local.sFile)
+		V.Local.sParams.Set("OrderNo")
+		V.Local.sValues.Set(v.Screen.frmContract!txtOrdno.text)
+		
+		F.Intrinsic.UI.ChangeWaitStatus("UCC Print in Progress...",75,1,100)
+
+		F.Intrinsic.File.Exists(V.local.sFile,V.Local.bFileExists)
+		F.Intrinsic.Control.If(V.Local.bFileExists,=,True)
+			F.Intrinsic.File.DeleteFile(V.local.sFile)
+		F.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.Control.If(V.local.sOUTPUTFile,<>,"")
+			f.Intrinsic.String.Build("{0}*!*{1}",V.local.sOUTPUTFile,v.Local.sfile,V.local.sOUTPUTFile)
+		f.Intrinsic.Control.Else
+			V.local.sOUTPUTFile.Set(v.Local.sfile)
+		f.Intrinsic.Control.endif
+		F.Global.BI.RunReportPreProcessor(V.local.iBiRunID,V.local.iBILogID,V.Local.sParams,V.Local.sValues,"",4,True,"",-1,"",0,v.Local.sfile,"",V.Local.iRet)
+	f.Intrinsic.Control.EndIf
+
+	f.Intrinsic.Control.If(V.local.sOUTPUTFile,<>,"")
+		F.Intrinsic.UI.ChangeWaitStatus("Merge document in Progress...",85,1,100)
+		f.Intrinsic.String.Build("{0}ContractPacket.pdf",v.Caller.LocalGSSTempDir,v.Local.sFileOut)
+		F.Intrinsic.File.Exists(V.local.sFileOut,V.Local.bFileExists)
+		F.Intrinsic.Control.If(V.Local.bFileExists,=,True)
+			F.Intrinsic.File.DeleteFile(V.local.sFileOut)
+		F.Intrinsic.Control.EndIf
+		
+		Function.Automation.PDF.Merge(V.local.sOUTPUTFile,V.local.sFileOut)
+		F.Intrinsic.File.GetHandle(V.Local.iHdl)
+			'Opening PDF
+		F.Intrinsic.Task.ShellExec(V.Local.iHdl,"Open",V.local.sFileOut,"","",1)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.UI.Msgbox("No Documents to print")
+	f.Intrinsic.Control.EndIf
+
+	'Function.Automation.PDF.Open("ContractPacket1.pdf",V.local.sFileOut)
+	Gui.frmPrint..Visible(false)
+	
+	F.Intrinsic.UI.CloseWaitDialog
+
+f.Intrinsic.Control.Catch
+F.Intrinsic.UI.CloseWaitDialog
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdPrint_Click.End
+
+Program.Sub.cmdSelAll_Click.Start
+	f.Data.Datatable.SetValue("DTPrint",-1,"Select",True)
+Program.Sub.cmdSelAll_Click.End
+
+Program.Sub.cmdDSelAll_Click.Start
+	f.Data.Datatable.SetValue("DTPrint",-1,"Select",False)
+Program.Sub.cmdDSelAll_Click.End
+
+Program.Sub.cmdCancel_Click.Start
+	gui.frmPrint..Visible(false)
+Program.Sub.cmdCancel_Click.End
+
+Program.Sub.CheckTable.Start
+f.Intrinsic.Control.Try
+
+V.Local.bExists.Declare
+V.Local.sSQL.Declare
+V.Local.sSQLMain.Declare
+V.Local.sSQLFinal.Declare
+V.Local.sTablename.Declare
+
+'GCG_5963_Contract
+V.Local.sSQL.Set("(Order_no VARCHAR(7) NOT NULL,CMPY_Code VARCHAR(3) NOT NULL,Contract_Type VARCHAR(1),Foreign_Domestic VARCHAR(1),OR_contract VARCHAR(9),Product_Line VARCHAR(2),Dealer_Name VARCHAR(40),")
+f.Intrinsic.String.Build("{0}Dealer_Contract VARCHAR(10),Location VARCHAR(15),Dealer_SO VARCHAR(7),Organization_Customer VARCHAR(40),Ranch_Orchad VARCHAR(30),Lname VARCHAR(20),Fname VARCHAR(20),Signator VARCHAR(20),Address VARCHAR(30),",V.Local.sSQL,V.Local.sSQL)
+f.Intrinsic.String.Build("{0}City VARCHAR(30),State VARCHAR(30),Zipcode VARCHAR(30),County VARCHAR(20),Telephone VARCHAR(20),Financial_Inst VARCHAR(20),Cash VARCHAR(20),Comments VARCHAR(200),Ship_Approval VARCHAR(1),ShipApproval_Date DATE,Base_Approval VARCHAR(1),",V.Local.sSQL,V.Local.sSQL)
+f.Intrinsic.String.Build("{0}Install_Approval VARCHAR(1),InstallApproval_Date DATE,Extended_Warranty VARCHAR(1),Payment_Terms VARCHAR(30),Miscellenous_Terms VARCHAR(50),Anti_DelDt VARCHAR(20),D_Payment_Terms VARCHAR(30),D_Miscellenous_Terms VARCHAR(50),",V.Local.sSQL,V.Local.sSQL)
+f.Intrinsic.String.Build("{0}D_Anti_DelDt DATE,Email_To VARCHAR(30),Mail_Dt DATE,D_Scheduled_Dt DATE,Price_Good DATE,Crop VARCHAR(10),Dept VARCHAR(20),Sold_By VARCHAR(20),UCC_Property VARCHAR(30),CustomerAddl VARCHAR(50),Dealer_PO VARCHAR(20),",V.Local.sSQL,V.Local.sSQL)
+f.Intrinsic.String.Build("{0}Address_d VARCHAR(30),State_d VARCHAR(15),Zip_d VARCHAR(15),City_d VARCHAR(30),Country_d VARCHAR(20),Contract_Dt DATE,SalesTax MONEY(8,2),Telephone_d VARCHAR(20),Email VARCHAR(30),D_Anti_DelDtNEW varchar(20),Revised_Text varchar(20) )",V.Local.sSQL,V.Local.sSQL)
+
+
+f.Intrinsic.Control.If(v.Caller.CompanyCode,=,"CWM","or",v.Caller.CompanyCode,=,"TS2")
+'Dealer
+
+	f.Intrinsic.Control.If(v.Caller.CompanyCode,=,"TS2")
+		v.local.sCompanyCode.Set("TST")
+	f.Intrinsic.Control.else.If(v.Caller.CompanyCode,=,"CWM")
+		v.local.sCompanyCode.Set("ORT")
+	f.Intrinsic.Control.EndIf
+		
+	F.ODBC.Connection!conx.TableExists("GCG_5963_Contract",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		V.Local.sTablename.Set("")
+
+		f.Intrinsic.String.Build("..\..\DDF\{0}\GCG_5963_Contract.mkd",v.local.sCompanyCode,V.Local.sTablename)
+		
+		f.Intrinsic.String.Build("CREATE TABLE GCG_5963_Contract IN DICTIONARY USING '{0}'",V.Local.sTablename,V.Local.sSQLMain)
+				
+		f.Intrinsic.String.Build("{0}{1}",V.Local.sSQLMain,V.Local.sSQL,V.Local.sSQLFinal)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQLFinal)
+	f.Intrinsic.Control.EndIf		
+f.Intrinsic.Control.elseIf(v.Caller.CompanyCode,=,"PDI","or",v.Caller.CompanyCode,=,"TS3")
+'Dealer		
+	f.Intrinsic.Control.If(v.Caller.CompanyCode,=,"TS3")
+		v.local.sCompanyCode.Set("TST")
+	f.Intrinsic.Control.else.If(v.Caller.CompanyCode,=,"PDI")
+		v.local.sCompanyCode.Set("ORT")
+	f.Intrinsic.Control.EndIf
+		
+	F.ODBC.Connection!conx.TableExists("GCG_5963_Contract",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		f.Intrinsic.String.Build("..\..\DDF\{0}\GCG_5963_Contract.mkd",v.local.sCompanyCode,V.Local.sTablename)
+		
+		f.Intrinsic.String.Build("CREATE TABLE GCG_5963_Contract IN DICTIONARY USING '{0}'",V.Local.sTablename,V.Local.sSQLMain)
+				
+		f.Intrinsic.String.Build("{0}{1}",V.Local.sSQLMain,V.Local.sSQL,V.Local.sSQLFinal)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQLFinal)
+	f.Intrinsic.Control.EndIf		
+f.Intrinsic.Control.elseIf(v.Caller.CompanyCode,=,"SWM")
+'Dealer
+	v.local.sCompanyCode.Set("ORT")
+
+	F.ODBC.Connection!conx.TableExists("GCG_5963_Contract",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		f.Intrinsic.String.Build("..\..\DDF\{0}\GCG_5963_Contract.mkd",v.local.sCompanyCode,V.Local.sTablename)
+		
+		f.Intrinsic.String.Build("CREATE TABLE GCG_5963_Contract IN DICTIONARY USING '{0}'",V.Local.sTablename,V.Local.sSQLMain)		
+		f.Intrinsic.String.Build("{0}{1}",V.Local.sSQLMain,V.Local.sSQL,V.Local.sSQLFinal)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQLFinal)
+	f.Intrinsic.Control.EndIf		
+
+f.Intrinsic.Control.elseIf(v.Caller.CompanyCode,=,"ORT","or",v.Caller.CompanyCode,=,"TST")
+	F.ODBC.Connection!conx.TableExists("GCG_5963_Contract",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		V.Local.sSQLMain.Set("CREATE TABLE GCG_5963_Contract")
+				
+		f.Intrinsic.String.Build("{0}{1}",V.Local.sSQLMain,V.Local.sSQL,V.Local.sSQLFinal)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQLFinal)
+	f.Intrinsic.Control.EndIf		
+F.Intrinsic.Control.EndIf	
+
+
+V.Local.sSQLFinal.Set("CREATE TABLE GCG_5963_Rpt(Order_No VARCHAR(7) NOT NULL,Part VARCHAR(20),Part_Desc VARCHAR(50),Qty DOUBLE,Cust_Price DOUBLE,Dealer_Price DOUBLE,Trml VARCHAR(10),Record_No VARCHAR(4))")
+F.ODBC.Connection!conx.TableExists("GCG_5963_Rpt",V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.ODBC.Connection!conx.Execute(V.Local.sSQLFinal)
+F.Intrinsic.Control.EndIf
+
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.CheckTable.End
+
+Program.Sub.CheckTable_REV.Start
+f.Intrinsic.Control.Try
+
+V.Local.bExists.Declare
+V.Local.sSQL.Declare
+V.Local.sSQLMain.Declare
+V.Local.sSQLFinal.Declare
+V.Local.sTablename.Declare
+
+'GCG_5963_RevHist
+
+
+V.Local.sSQL.Set("(Order_no CHAR(7) NOT NULL,Cmpy_Code VARCHAR(3) NOT NULL,UserCode VARCHAR(10),Rev_Date TIMESTAMP DEFAULT NOW(),Notes VARCHAR(200))")
+
+f.Intrinsic.Control.If(v.Caller.CompanyCode,=,"CWM","or",v.Caller.CompanyCode,=,"TS2")
+'Dealer
+
+	f.Intrinsic.Control.If(v.Caller.CompanyCode,=,"TS2")
+		v.local.sCompanyCode.Set("TST")
+	f.Intrinsic.Control.else.If(v.Caller.CompanyCode,=,"CWM")
+		v.local.sCompanyCode.Set("ORT")
+	f.Intrinsic.Control.EndIf
+		
+	F.ODBC.Connection!conx.TableExists("GCG_5963_RevHist",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		f.Intrinsic.String.Build("..\..\DDF\{0}\GCG_5963_RevHist.mkd",v.local.sCompanyCode,V.Local.sTablename)
+		
+		f.Intrinsic.String.Build("CREATE TABLE GCG_5963_RevHist IN DICTIONARY USING '{0}'",V.Local.sTablename,V.Local.sSQLMain)		
+		f.Intrinsic.String.Build("{0}{1}",V.Local.sSQLMain,V.Local.sSQL,V.Local.sSQLFinal)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQLFinal)
+	f.Intrinsic.Control.EndIf		
+f.Intrinsic.Control.elseIf(v.Caller.CompanyCode,=,"PDI","or",v.Caller.CompanyCode,=,"TS3")
+'Dealer		
+	f.Intrinsic.Control.If(v.Caller.CompanyCode,=,"TS3")
+		v.local.sCompanyCode.Set("TST")
+	f.Intrinsic.Control.else.If(v.Caller.CompanyCode,=,"PDI")
+		v.local.sCompanyCode.Set("ORT")
+	f.Intrinsic.Control.EndIf
+		
+	F.ODBC.Connection!conx.TableExists("GCG_5963_RevHist",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		f.Intrinsic.String.Build("..\..\DDF\{0}\GCG_5963_RevHist.mkd",v.local.sCompanyCode,V.Local.sTablename)
+		
+		f.Intrinsic.String.Build("CREATE TABLE GCG_5963_RevHist IN DICTIONARY USING '{0}'",V.Local.sTablename,V.Local.sSQLMain)	
+				
+		f.Intrinsic.String.Build("{0}{1}",V.Local.sSQLMain,V.Local.sSQL,V.Local.sSQLFinal)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQLFinal)
+	f.Intrinsic.Control.EndIf		
+f.Intrinsic.Control.elseIf(v.Caller.CompanyCode,=,"SWM")
+'Dealer
+	v.local.sCompanyCode.Set("ORT")
+
+	F.ODBC.Connection!conx.TableExists("GCG_5963_RevHist",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		f.Intrinsic.String.Build("..\..\DDF\{0}\GCG_5963_RevHist.mkd",v.local.sCompanyCode,V.Local.sTablename)
+		
+		f.Intrinsic.String.Build("CREATE TABLE GCG_5963_RevHist IN DICTIONARY USING '{0}'",V.Local.sTablename,V.Local.sSQLMain)	
+				
+		f.Intrinsic.String.Build("{0}{1}",V.Local.sSQLMain,V.Local.sSQL,V.Local.sSQLFinal)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQLFinal)
+	f.Intrinsic.Control.EndIf		
+
+f.Intrinsic.Control.elseIf(v.Caller.CompanyCode,=,"ORT","or",v.Caller.CompanyCode,=,"TST")
+	F.ODBC.Connection!conx.TableExists("GCG_5963_RevHist",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		V.Local.sSQLMain.Set("CREATE TABLE GCG_5963_RevHist")
+				
+		f.Intrinsic.String.Build("{0}{1}",V.Local.sSQLMain,V.Local.sSQL,V.Local.sSQLFinal)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQLFinal)
+	f.Intrinsic.Control.EndIf		
+F.Intrinsic.Control.EndIf	
+
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.CheckTable_REV.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$rnair$}$20210309004823046$}$JUGEdtlNdgRUPvge2DQ26bz/1piQWHOnJIbK+axO2QzQlDdKvQCGrj7KgjCEFPbRPTW6ErZlEEc=
+Program.Sub.Comments.End
